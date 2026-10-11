@@ -69,11 +69,23 @@ MIN_N_FOR_HOTSPOT_CELL = 5   # Absenteeism Hotspots: minimum (class, program-sta
 NEVER_STARTED = {'No Start', 'New Applicant', 'Accepted'}
 PROGRAM_SHORT = {
     'Practical Nursing': 'PN',
+    'Practical Nursing Program': 'PN',
     'Associate of Applied Science in Nursing One + One': 'ADN (1+1)',
     'Associate of Applied Science in Nursing': 'ADN',
+    'Registered Nursing': 'ADN',
     'Bachelor of Science in Nursing': 'BSN',
     'RN to BSN Completion Program': 'RN-to-BSN',
 }
+
+# Standard U.S. undergraduate credit-hour threshold for full-time enrollment
+# status (12+ credits/term). Felbry's own methodology doc for the
+# Full-Time vs. Part-Time credit-load extract (2026-10-11 batch) explicitly
+# says "the institutional full-time/part-time credit-hour rule will then be
+# applied" without stating that rule's exact number -- this is Claude's own
+# reasonable default pending Felbry's confirmation, exactly like the
+# PN->AAS->BSN Ladder Rate formula below. Documented as such on the
+# Documentation page.
+FULL_TIME_CREDIT_THRESHOLD = 12.0
 PASS_GRADES = {'A', 'B', 'C', 'S'}
 FAIL_GRADES = {'F', 'WF', 'U'}
 GPA_MAP = {'A': 4.0, 'B': 3.0, 'C': 2.0, 'F': 0.0}
@@ -342,11 +354,81 @@ def run_pipeline(archive_root: str = "data_archive") -> dict:
 
     retention_by_enroll_type = pooled_retention_by('enroll_type') if 'enroll_type' in roster.columns else {}
 
+    # Retention Rate by Program: population-per-program now sourced from the
+    # dedicated class-enrollment-based "Retention Rate by Program" extract
+    # (2026-10-11 batch) when present -- per Felbry's own methodology doc,
+    # this captures students via actual Class Start Date activity rather than
+    # the registration roster's "Enrolled Semester" field, which is why it
+    # can clear MIN_N_FOR_PROGRAM_RETENTION for programs the roster-based
+    # estimate couldn't.
+    #
+    # IMPORTANT data-quality finding (2026-10-11): this extract's per-term
+    # population is MUCH larger than the roster-based `active_{term}` count
+    # -- e.g. Fall 2024 shows 187 distinct students here vs. 68 in the
+    # roster reconstruction. Cross-checked against two other activity-based
+    # sources (attendance: 194 unique students in Fall 2024; academic
+    # performance: 172) -- both agree with THIS extract, not with the
+    # roster. The likely cause: the roster is built entirely from 6
+    # entry-cohort files (Fall 2024-Summer 2026), so any student who entered
+    # BEFORE Fall 2024 and is still continuing is invisible to it -- exactly
+    # the population the GPA Trend extract already showed exists (cohorts
+    # back to Fall 2017). The gap is worst in the earliest terms and shrinks
+    # over time as more of the real population falls inside the 6-term
+    # window (roster captures ~35% of Fall 2024's real activity but ~83% of
+    # Summer 2026's -- see `enrollment_coverage_check` below). This means
+    # Total Enrollment, Retention Rate, Withdrawal Rate, and Enrollment by
+    # Program on the Overview page -- all built on the same roster
+    # reconstruction -- likely UNDERCOUNT real headcount, worst for Fall
+    # 2024. Flagged on the Documentation page; NOT silently corrected here,
+    # since fixing it would change already-reported headline numbers and
+    # needs Felbry's sign-off on how to re-pull a true "currently enrolled"
+    # snapshot per term (the entry-cohort files alone can't fix this).
+    #
+    # Because of this mismatch, "retained into n+1" is computed from THIS
+    # SAME extract's own term-(n+1) population, not the roster's
+    # `active_{n+1}` -- mixing the two produced implausible <35% rates that
+    # turned out to be an artifact of comparing a complete population against
+    # an undercounted one, not a real retention problem. Falls back to the
+    # registration-roster-based estimate (pre-2026-10-11 method, both ends
+    # from the roster) when no such extract has been uploaded yet.
+    retention_by_program_src = _load_and_concat(archive_root, 'retention_by_program')
+    rbp_active = pd.DataFrame()
+    enrollment_coverage_check = {}
+    if not retention_by_program_src.empty:
+        rbp = retention_by_program_src.rename(columns={
+            'Student Id Number': 'student_id', 'Class Start Date': 'class_start', 'Program': 'program',
+        })
+        key_cols = [c for c in ['student_id', 'Class Name', 'class_start'] if c in rbp.columns]
+        if key_cols:
+            rbp = _dedupe_keep_latest(rbp, key_cols)
+        rbp['class_start'] = to_date(rbp['class_start'])
+        rbp['term'] = rbp['class_start'].map(_term_for_date)
+        # Program values not in PROGRAM_SHORT (e.g. the single-row "AASN
+        # PN-Test" junk record, same as the Ladder Rate extract) map to NaN
+        # and are dropped below rather than counted anywhere.
+        rbp['program_short'] = rbp['program'].map(PROGRAM_SHORT)
+        rbp_active = (
+            rbp.dropna(subset=['term', 'program_short'])
+            .drop_duplicates(['student_id', 'term', 'program_short'])
+        )
+        for term in TERM_ORDER:
+            class_activity_n = int(rbp.loc[rbp['term'] == term, 'student_id'].nunique())
+            roster_n = active_counts.get(term, 0)
+            enrollment_coverage_check[term] = {
+                "roster_active": roster_n,
+                "class_activity_students": class_activity_n,
+                "roster_coverage": dround_or_none(roster_n / class_activity_n) if class_activity_n else None,
+            }
+
     retention_by_program = []
     for i in range(len(TERM_ORDER) - 1):
         n, n1 = TERM_ORDER[i], TERM_ORDER[i + 1]
-        sub_n = roster[roster[f'active_{n}']].drop_duplicates('student_id')
-        ids_n1 = set(roster.loc[roster[f'active_{n1}'], 'student_id'])
+        if len(rbp_active):
+            sub_n = rbp_active[rbp_active['term'] == n]
+            ids_n1 = set(rbp_active.loc[rbp_active['term'] == n1, 'student_id'])
+        else:
+            sub_n = roster[roster[f'active_{n}']].drop_duplicates('student_id')
+            ids_n1 = set(roster.loc[roster[f'active_{n1}'], 'student_id'])
         for prog, grp in sub_n.groupby('program_short'):
             ids_n = set(grp['student_id'])
             if len(ids_n) < MIN_N_FOR_PROGRAM_RETENTION:
@@ -668,6 +750,92 @@ def run_pipeline(archive_root: str = "data_archive") -> dict:
             }
 
     # -----------------------------------------------------------------
+    # 8e. Faculty : Student Ratio (2026-10-11 batch) -- per Felbry's own
+    #     methodology doc: grouped by class/section, distinct Student IDs
+    #     determine enrollment and distinct REAL instructors determine
+    #     faculty count. "TBD" is Orbund's placeholder for an unassigned
+    #     instructor, not a real person, so it's excluded from the faculty
+    #     count (counting it would understate real class-staffing load).
+    #     Reported as a school-wide ratio per term: total distinct students
+    #     in classes that term / total distinct real instructors that term.
+    # -----------------------------------------------------------------
+    faculty_ratio_by_term = {}
+    faculty_ratio_raw = _load_and_concat(archive_root, 'faculty_ratio')
+    if not faculty_ratio_raw.empty:
+        fr = faculty_ratio_raw.rename(columns={
+            'Student Id Number': 'student_id', 'Class Name': 'class_name',
+            'Instructor Last Name': 'instr_last', 'Instructor First Name': 'instr_first',
+            'Class Start Date': 'class_start',
+        })
+        key_cols = [c for c in ['student_id', 'class_name', 'class_start'] if c in fr.columns]
+        if key_cols:
+            fr = _dedupe_keep_latest(fr, key_cols)
+        fr['class_start'] = to_date(fr['class_start'])
+        fr['term'] = fr['class_start'].map(_term_for_date)
+        fr['instructor'] = (fr['instr_last'].fillna('') + ' ' + fr['instr_first'].fillna('')).str.strip()
+        fr['is_real_instructor'] = fr['instr_last'].notna() & ~fr['instr_last'].isin(['TBD', ''])
+
+        for term, grp in fr.dropna(subset=['term']).groupby('term'):
+            n_students = int(grp['student_id'].nunique())
+            n_faculty = int(grp.loc[grp['is_real_instructor'], 'instructor'].nunique())
+            faculty_ratio_by_term[term] = {
+                "students": n_students, "faculty": n_faculty,
+                "ratio": dround_or_none(n_students / n_faculty) if n_faculty else None,
+            }
+
+    # -----------------------------------------------------------------
+    # 8f. Full-Time vs. Part-Time retention gap, credit-hour based
+    #     (2026-10-11 batch) -- per Felbry's own methodology doc: sum each
+    #     student's registered credits per term from the dedicated
+    #     Full-Time-vs-Part-Time extract, classify Full-Time/Part-Time
+    #     against FULL_TIME_CREDIT_THRESHOLD (see that constant's comment),
+    #     then join that classification by Student ID to the SAME
+    #     consecutive-term "retained into n+1" definition already used for
+    #     the Overview retention rate. This supersedes the old self-reported
+    #     "Enroll Type" (Full-time/Half-time) field as the authoritative
+    #     source for the Equity page's Full-Time vs. Part-Time comparison,
+    #     per Felbry's doc: "...used to classify the student as Full-Time or
+    #     Part-Time...joined...to produce the Full-Time vs. Part-Time Gap."
+    # -----------------------------------------------------------------
+    retention_by_credit_load = {}
+    ftpt_raw = _load_and_concat(archive_root, 'full_time_part_time')
+    if not ftpt_raw.empty:
+        fp = ftpt_raw.rename(columns={
+            'Student Id Number': 'student_id', 'Course Number': 'course_no',
+            'Credit': 'credit', 'Class Start Date': 'class_start',
+        })
+        key_cols = [c for c in ['student_id', 'course_no', 'class_start'] if c in fp.columns]
+        if key_cols:
+            fp = _dedupe_keep_latest(fp, key_cols)
+        fp['class_start'] = to_date(fp['class_start'])
+        fp['credit'] = pd.to_numeric(fp['credit'], errors='coerce')
+        fp['term'] = fp['class_start'].map(_term_for_date)
+
+        credits_by_student_term = (
+            fp.dropna(subset=['term', 'credit']).groupby(['student_id', 'term'])['credit'].sum()
+        )
+        intensity = credits_by_student_term.apply(
+            lambda c: 'Full-Time' if c >= FULL_TIME_CREDIT_THRESHOLD else 'Part-Time'
+        )
+
+        out = {'Full-Time': {'denom': 0, 'num': 0}, 'Part-Time': {'denom': 0, 'num': 0}}
+        for i in range(len(TERM_ORDER) - 1):
+            n, n1 = TERM_ORDER[i], TERM_ORDER[i + 1]
+            sub_n = roster[roster[f'active_{n}']].drop_duplicates('student_id')
+            ids_n1 = set(roster.loc[roster[f'active_{n1}'], 'student_id'])
+            for sid in sub_n['student_id']:
+                label = intensity.get((sid, n))
+                if label is None:
+                    continue
+                out[label]['denom'] += 1
+                if sid in ids_n1:
+                    out[label]['num'] += 1
+        for label in out:
+            d = out[label]
+            d['rate'] = (d['num'] / d['denom']) if d['denom'] else None
+        retention_by_credit_load = out
+
+    # -----------------------------------------------------------------
     # 9. Completion proxy by enroll type.
     # -----------------------------------------------------------------
     completion_proxy = {}
@@ -748,6 +916,14 @@ def run_pipeline(archive_root: str = "data_archive") -> dict:
         "midterm_withdrawals": midterm_withdrawals,
         "ladder_rate": ladder_rate,
         "completion_proxy_by_enroll_type": {k: dround_or_none(v) for k, v in completion_proxy.items()},
+        "faculty_ratio_by_term": faculty_ratio_by_term,
+        "retention_by_credit_load": {
+            k: {"denominator": v["denom"], "retained": v["num"], "rate": dround_or_none(v["rate"])}
+            for k, v in retention_by_credit_load.items()
+        },
+        "full_time_credit_threshold": FULL_TIME_CREDIT_THRESHOLD,
+        "retention_by_program_source": "class_enrollment" if len(rbp_active) else "registration_roster",
+        "enrollment_coverage_check": enrollment_coverage_check,
         "_archive_summary": {
             "enrollment_files": len(_archive_files(archive_root, 'enrollment')),
             "withdrawal_files": len(_archive_files(archive_root, 'withdrawal')),
@@ -760,6 +936,9 @@ def run_pipeline(archive_root: str = "data_archive") -> dict:
             "midterm_withdrawals_files": len(_archive_files(archive_root, 'midterm_withdrawals')),
             "gpa_trend_files": len(_archive_files(archive_root, 'gpa_trend')),
             "ladder_rate_files": len(_archive_files(archive_root, 'ladder_rate')),
+            "faculty_ratio_files": len(_archive_files(archive_root, 'faculty_ratio')),
+            "full_time_part_time_files": len(_archive_files(archive_root, 'full_time_part_time')),
+            "retention_by_program_files": len(_archive_files(archive_root, 'retention_by_program')),
             "roster_rows": int(len(roster)),
             "roster_unique_students": int(roster['student_id'].nunique()),
         },

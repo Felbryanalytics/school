@@ -27,10 +27,14 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(
 
 from detectors import detect_file, TYPE_LABELS, TYPE_FEEDS  # noqa: E402
 from git_sync import pull_latest, commit_and_push, sync_configured, GitSyncError  # noqa: E402
+from auth import require_login, inject_branding, sidebar_signout  # noqa: E402
 
 NOT_SURE = "__not_sure__"
 
 st.set_page_config(page_title="Upload Data -- Felbry KPI System", page_icon="📤", layout="wide")
+require_login()
+inject_branding("Upload Data")
+sidebar_signout()
 st.title("📤 Upload Data")
 
 if sync_configured():
@@ -42,8 +46,9 @@ else:
     st.error(
         "Persistent storage isn't connected (no GITHUB_TOKEN configured). "
         "Anything you upload right now will be lost the next time this app "
-        "restarts. Please tell whoever manages this app before uploading "
-        "real data.",
+        "restarts. See README.md, One-time setup -> step 4 'Connect "
+        "persistent storage', or tell whoever manages this app before "
+        "uploading real data.",
         icon="🚫",
     )
 

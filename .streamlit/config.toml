@@ -1,7 +1,10 @@
 [theme]
-primaryColor = "#2f5d9e"
+# Felbry College brand colors (matches dashboard_template.html and
+# analysis/auth.py) -- primaryColor drives buttons, active widgets, links,
+# and selection highlights across every Streamlit page automatically.
+primaryColor = "#83010c"
 backgroundColor = "#ffffff"
-secondaryBackgroundColor = "#f4f6f9"
+secondaryBackgroundColor = "#fbfafa"
 textColor = "#1a1a1a"
 font = "sans serif"
 

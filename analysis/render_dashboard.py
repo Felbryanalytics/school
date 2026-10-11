@@ -18,6 +18,7 @@ import os
 import re
 
 _REAL_DATA_BLOCK = re.compile(r"const REAL_DATA = \{.*?\n\};", re.DOTALL)
+_BODY_TAG = re.compile(r"<body>")
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_TEMPLATE = os.path.join(REPO_ROOT, "dashboard_template.html")
@@ -31,7 +32,18 @@ class RenderError(Exception):
 def render_dashboard_html(
     kpi_path: str = DEFAULT_KPI_PATH,
     template_path: str = DEFAULT_TEMPLATE,
+    skip_login_gate: bool = False,
 ) -> str:
+    """`skip_login_gate=True` pre-marks the embedded page's <body> as
+    already authenticated, so it renders straight to the dashboard instead
+    of showing its own email/password overlay a second time. Use this only
+    when the viewer has ALREADY passed a real gate in front of this HTML --
+    the Streamlit app's own `auth.require_login()`, which now protects this
+    page (and every other page) before render_dashboard_html() is even
+    called. The standalone claude.ai Artifact build of this same template
+    has no such front door, so it must keep calling this with the default
+    (False) and showing its own gate -- that overlay is the *only* access
+    control that link has."""
     if not os.path.exists(kpi_path):
         raise RenderError(
             "No KPI data has been computed yet. Go to the 'Run Analysis' page "
@@ -54,4 +66,14 @@ def render_dashboard_html(
             "doesn't expect. (Looked for a line starting with "
             "'const REAL_DATA = {' followed by a line that is just '};'.)"
         )
+
+    if skip_login_gate:
+        new_html, body_n = _BODY_TAG.subn('<body class="authed">', new_html, count=1)
+        if body_n == 0:
+            raise RenderError(
+                "Could not find the <body> tag in dashboard_template.html to "
+                "mark as already signed in -- the template may have been "
+                "edited in a way this script doesn't expect."
+            )
+
     return new_html

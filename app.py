@@ -27,8 +27,16 @@ import streamlit as st
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "analysis"))
 
 from git_sync import pull_latest, sync_configured, GitSyncError  # noqa: E402
+from auth import require_login, inject_branding, sidebar_signout  # noqa: E402
 
 st.set_page_config(page_title="Felbry College KPI System", page_icon="🎓", layout="wide")
+
+# Gate the ENTIRE app here, on the landing page, before anything else renders
+# (including the archive/GitHub-sync status below) -- this is the one shared
+# sign-in check every page in pages/ also calls first, via st.session_state.
+require_login()
+inject_branding("Home")
+sidebar_signout()
 
 KPI_PATH = os.path.join("data_archive", "kpi_output", "REAL_DATA.json")
 ARCHIVE_TYPES = ["enrollment", "withdrawal", "gradebook", "attendance", "engagement"]
@@ -70,15 +78,18 @@ else:
     sync_warning = (
         "Persistent storage isn't connected yet (no GITHUB_TOKEN configured). "
         "Uploads and analysis results will be lost the next time this app "
-        "restarts. This must be fixed before real use -- see the README's "
-        "'Connecting persistent storage' section."
+        "restarts. This must be fixed before real use -- see README.md, "
+        "**One-time setup -> step 4 'Connect persistent storage'**, for the "
+        "exact steps (generate a GitHub token, paste it into this app's "
+        "Settings -> Secrets)."
     )
 
 st.title("🎓 Felbry College KPI System")
 
 viewer = _current_viewer()
-if viewer:
-    st.caption(f"Signed in as **{viewer}**")
+signed_in_as = viewer or st.session_state.get("felbry_email")
+if signed_in_as:
+    st.caption(f"Signed in as **{signed_in_as}**")
 
 if sync_warning:
     st.warning(sync_warning, icon="⚠️")

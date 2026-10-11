@@ -9,16 +9,21 @@ a wrong guess here would quietly corrupt every KPI downstream.
 
 Known dataset types, as observed in the school's actual exports: enrollment
 rosters, withdrawal extracts, the gradebook, attendance logs, LMS (Canvas)
-engagement exports (2026-09-26 batch), plus five more added in the
-2026-10-01 batch -- absenteeism hotspots, academic performance (course
-pass/fail by grade), midterm-withdrawal flags, GPA-by-cohort trend data,
-and the PN-AAS-BSN ladder-progression extract. Several of the newer types
-have column sets that are a strict subset or near-subset of an older type's
-(e.g. "withdrawals before midterm" is a 4-column slice of what's already in
-gradebook/academic performance, and the ladder-rate extract is a 6-column
-slice of withdrawal). Each such pair gets an explicit `required_any_of` /
-`exclude_any_of` gate below so the single column that's actually unique to
-one side of the pair decides it, rather than relying on raw overlap counts.
+engagement exports (2026-09-26 batch); five more added in the 2026-10-01
+batch -- absenteeism hotspots, academic performance (course pass/fail by
+grade), midterm-withdrawal flags, GPA-by-cohort trend data, and the
+PN-AAS-BSN ladder-progression extract; and three more added in the
+2026-10-11 batch -- faculty:student ratio, full-time vs. part-time
+credit-load data, and a class-enrollment-based retention-by-program extract.
+Several of the newer types have column sets that are a strict subset or
+near-subset of an older type's (e.g. "withdrawals before midterm" is a
+4-column slice of what's already in gradebook/academic performance, the
+ladder-rate extract is a 6-column slice of withdrawal, and the three
+2026-10-11 types all share "Student ID Number, Class Name, Class Start
+Date" with each other and with academic performance / gpa trend). Each such
+pair gets an explicit `required_any_of` / `exclude_any_of` gate below so the
+column(s) that are actually unique to one side of the pair decide it, rather
+than relying on raw overlap counts.
 """
 from __future__ import annotations
 
@@ -99,6 +104,35 @@ SIGNATURES = {
         # extract, which is this file plus that one column.
         "exclude_any_of": [{"withdrawal reason"}],
     },
+    "faculty_ratio": {
+        "core": {"student id number", "class name", "instructor last name", "instructor first name",
+                 "class start date", "class end date"},
+        # Must have an instructor name column -- that's what's unique vs.
+        # retention_by_program, which is this file minus the two instructor
+        # columns plus a Program column.
+        "required_any_of": [{"instructor last name", "instructor first name"}],
+    },
+    "full_time_part_time": {
+        "core": {"student id number", "course number", "course title", "credit", "class name",
+                 "class start date", "program"},
+        # Must have a Credit column -- that's what's unique vs. gpa_trend and
+        # academic_performance, which share several of these columns but
+        # don't carry credit-hour totals in this shape.
+        "required_any_of": [{"credit"}],
+    },
+    "retention_by_program": {
+        "core": {"student id number", "class name", "class start date", "class end date", "program"},
+        # Must NOT have an instructor name -- that's the faculty_ratio
+        # extract, which is this file's shape (minus Program) plus two
+        # instructor columns.
+        "exclude_any_of": [{"instructor last name", "instructor first name"},
+                            # Must NOT look like full_time_part_time either --
+                            # that extract shares student id/class name/class
+                            # start date/program with this one but carries
+                            # course number/title/credit instead of a class
+                            # end date.
+                            {"course number", "course title", "credit"}],
+    },
 }
 
 TYPE_LABELS = {
@@ -112,6 +146,9 @@ TYPE_LABELS = {
     "midterm_withdrawals": "Withdrawals before midterm",
     "gpa_trend": "GPA trend by cohort",
     "ladder_rate": "PN-AAS-BSN ladder progression",
+    "faculty_ratio": "Faculty : student ratio (class/section-level)",
+    "full_time_part_time": "Full-time vs. part-time credit-load data",
+    "retention_by_program": "Retention rate by program (class-enrollment-based)",
 }
 
 # What each type feeds, shown to staff after a confident detection so they
@@ -127,6 +164,9 @@ TYPE_FEEDS = {
     "midterm_withdrawals": "the Withdrawals Before Midterm KPI (course-withdrawal events split by before/after the midterm point).",
     "gpa_trend": "the GPA Trend by Entry Cohort chart.",
     "ladder_rate": "the PN -> AAS/ASN -> BSN Ladder Progression Rate KPI.",
+    "faculty_ratio": "the Faculty : Student Ratio stat tile (Faculty & Operations page).",
+    "full_time_part_time": "the credit-hour-based Full-Time vs. Part-Time retention gap (Demographics & Equity page) -- this is now the authoritative source for that comparison, in place of the self-reported Enroll Type field.",
+    "retention_by_program": "the Retention Rate by Program chart (Retention page) -- this is now the authoritative source for that chart, in place of the registration-roster-based estimate.",
 }
 
 CONFIDENT_THRESHOLD = 0.7   # fraction of "core" columns that must be present
@@ -187,9 +227,10 @@ def detect_columns(columns) -> DetectionResult:
                 "This file's columns don't clearly match any known data type "
                 "(enrollment, withdrawal, gradebook, attendance, LMS engagement, "
                 "absenteeism hotspots, academic performance, withdrawals before "
-                "midterm, GPA trend by cohort, or ladder progression). Please "
-                "double-check the file before uploading, or tell us which type "
-                "it is using the dropdown above."
+                "midterm, GPA trend by cohort, ladder progression, faculty:student "
+                "ratio, full-time vs. part-time credit load, or retention by "
+                "program). Please double-check the file before uploading, or tell "
+                "us which type it is using the dropdown above."
             ),
         )
 

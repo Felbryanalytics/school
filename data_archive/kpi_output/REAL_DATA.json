@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02 14:48 UTC",
+  "generated_at": "2026-10-11 20:34 UTC",
   "term_order": [
     "Fall 2024",
     "Spring 2025",
@@ -67,8 +67,8 @@
       "RN-to-BSN": 3
     },
     "Spring 2026": {
-      "PN": 128,
-      "ADN (1+1)": 44,
+      "PN": 129,
+      "ADN (1+1)": 43,
       "BSN": 7,
       "RN-to-BSN": 3
     },
@@ -117,14 +117,14 @@
   ],
   "retention_by_enroll_type": {
     "Full-time (100%)": {
-      "denominator": 435,
-      "retained": 335,
-      "rate": 0.7701
+      "denominator": 436,
+      "retained": 336,
+      "rate": 0.7706
     },
     "Half-time (50%)": {
-      "denominator": 314,
-      "retained": 244,
-      "rate": 0.7771
+      "denominator": 313,
+      "retained": 243,
+      "rate": 0.7764
     }
   },
   "retention_by_program": [
@@ -132,81 +132,81 @@
       "from": "Fall 2024",
       "to": "Spring 2025",
       "program": "ADN (1+1)",
-      "denominator": 42,
-      "retained": 31,
-      "rate": 0.7381
+      "denominator": 107,
+      "retained": 78,
+      "rate": 0.729
     },
     {
       "from": "Fall 2024",
       "to": "Spring 2025",
       "program": "PN",
-      "denominator": 24,
-      "retained": 24,
-      "rate": 1.0
+      "denominator": 67,
+      "retained": 44,
+      "rate": 0.6567
     },
     {
       "from": "Spring 2025",
       "to": "Summer 2025",
       "program": "ADN (1+1)",
-      "denominator": 74,
-      "retained": 57,
-      "rate": 0.7703
+      "denominator": 115,
+      "retained": 84,
+      "rate": 0.7304
     },
     {
       "from": "Spring 2025",
       "to": "Summer 2025",
       "program": "PN",
-      "denominator": 53,
-      "retained": 40,
-      "rate": 0.7547
+      "denominator": 80,
+      "retained": 56,
+      "rate": 0.7
     },
     {
       "from": "Summer 2025",
       "to": "Fall 2025",
       "program": "ADN (1+1)",
-      "denominator": 57,
-      "retained": 53,
-      "rate": 0.9298
-    },
-    {
-      "from": "Summer 2025",
-      "to": "Fall 2025",
-      "program": "PN",
       "denominator": 92,
       "retained": 81,
       "rate": 0.8804
     },
     {
+      "from": "Summer 2025",
+      "to": "Fall 2025",
+      "program": "PN",
+      "denominator": 103,
+      "retained": 76,
+      "rate": 0.7379
+    },
+    {
       "from": "Fall 2025",
       "to": "Spring 2026",
       "program": "ADN (1+1)",
-      "denominator": 57,
-      "retained": 38,
-      "rate": 0.6667
+      "denominator": 92,
+      "retained": 68,
+      "rate": 0.7391
     },
     {
       "from": "Fall 2025",
       "to": "Spring 2026",
       "program": "PN",
-      "denominator": 141,
-      "retained": 98,
-      "rate": 0.695
+      "denominator": 134,
+      "retained": 89,
+      "rate": 0.6642
     },
     {
       "from": "Spring 2026",
       "to": "Summer 2026",
       "program": "ADN (1+1)",
-      "denominator": 44,
-      "retained": 29,
-      "rate": 0.6591
+      "denominator": 73,
+      "retained": 45,
+      "rate": 0.6164
     },
     {
       "from": "Spring 2026",
       "to": "Summer 2026",
       "program": "PN",
-      "denominator": 128,
-      "retained": 95,
-      "rate": 0.7422
+      "denominator": 122,
+      "retained": 89,
+      "rate": 0.7295
     }
   ],
   "withdrawal_by_term": {
@@ -3987,6 +3987,84 @@
     "Full-time (100%)": 0.2647,
     "Half-time (50%)": 0.2697
   },
+  "faculty_ratio_by_term": {
+    "Fall 2024": {
+      "students": 187,
+      "faculty": 19,
+      "ratio": 9.8421
+    },
+    "Fall 2025": {
+      "students": 240,
+      "faculty": 30,
+      "ratio": 8.0
+    },
+    "Spring 2025": {
+      "students": 204,
+      "faculty": 20,
+      "ratio": 10.2
+    },
+    "Spring 2026": {
+      "students": 204,
+      "faculty": 30,
+      "ratio": 6.8
+    },
+    "Summer 2025": {
+      "students": 203,
+      "faculty": 23,
+      "ratio": 8.8261
+    },
+    "Summer 2026": {
+      "students": 190,
+      "faculty": 30,
+      "ratio": 6.3333
+    }
+  },
+  "retention_by_credit_load": {
+    "Full-Time": {
+      "denominator": 401,
+      "retained": 344,
+      "rate": 0.8579
+    },
+    "Part-Time": {
+      "denominator": 321,
+      "retained": 230,
+      "rate": 0.7165
+    }
+  },
+  "full_time_credit_threshold": 12.0,
+  "retention_by_program_source": "class_enrollment",
+  "enrollment_coverage_check": {
+    "Fall 2024": {
+      "roster_active": 68,
+      "class_activity_students": 187,
+      "roster_coverage": 0.3636
+    },
+    "Spring 2025": {
+      "roster_active": 135,
+      "class_activity_students": 209,
+      "roster_coverage": 0.6459
+    },
+    "Summer 2025": {
+      "roster_active": 156,
+      "class_activity_students": 206,
+      "roster_coverage": 0.7573
+    },
+    "Fall 2025": {
+      "roster_active": 208,
+      "class_activity_students": 240,
+      "roster_coverage": 0.8667
+    },
+    "Spring 2026": {
+      "roster_active": 182,
+      "class_activity_students": 210,
+      "roster_coverage": 0.8667
+    },
+    "Summer 2026": {
+      "roster_active": 180,
+      "class_activity_students": 190,
+      "roster_coverage": 0.9474
+    }
+  },
   "_archive_summary": {
     "enrollment_files": 6,
     "withdrawal_files": 6,
@@ -3999,6 +4077,9 @@
     "midterm_withdrawals_files": 6,
     "gpa_trend_files": 1,
     "ladder_rate_files": 1,
+    "faculty_ratio_files": 6,
+    "full_time_part_time_files": 6,
+    "retention_by_program_files": 6,
     "roster_rows": 808,
     "roster_unique_students": 763
   }

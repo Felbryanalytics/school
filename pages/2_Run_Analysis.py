@@ -24,8 +24,12 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(
 
 from pipeline import write_kpi_output, PipelineError  # noqa: E402
 from git_sync import pull_latest, commit_and_push, sync_configured, GitSyncError  # noqa: E402
+from auth import require_login, inject_branding, sidebar_signout  # noqa: E402
 
 st.set_page_config(page_title="Run Analysis -- Felbry KPI System", page_icon="🔄", layout="wide")
+require_login()
+inject_branding("Run Analysis")
+sidebar_signout()
 st.title("🔄 Run Analysis")
 
 if sync_configured():
@@ -37,7 +41,8 @@ else:
     st.warning(
         "Persistent storage isn't connected (no GITHUB_TOKEN configured). "
         "Analysis will still run, but the result will be lost when this app "
-        "restarts.",
+        "restarts. See README.md, One-time setup -> step 4 'Connect "
+        "persistent storage'.",
         icon="⚠️",
     )
 

@@ -23,8 +23,18 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(
 
 from render_dashboard import render_dashboard_html, RenderError  # noqa: E402
 from git_sync import pull_latest, sync_configured, GitSyncError  # noqa: E402
+from auth import require_login, inject_branding, sidebar_signout  # noqa: E402
 
 st.set_page_config(page_title="Dashboard -- Felbry KPI System", page_icon="📊", layout="wide")
+
+# Gate at the Streamlit level, same as every other page. Because this page
+# already enforces that gate, the embedded HTML below is told to skip its
+# OWN separate login overlay (skip_login_gate=True) -- otherwise staff would
+# have to sign in a second time just to view the dashboard they already
+# unlocked on the landing page.
+require_login()
+inject_branding("Dashboard")
+sidebar_signout()
 
 # A quick metadata pull only -- this is a fast git fetch of already-computed
 # numbers, not a recalculation, so it doesn't slow this page down.
@@ -35,7 +45,7 @@ if sync_configured():
         pass  # don't block viewing whatever is already on disk locally
 
 try:
-    html = render_dashboard_html()
+    html = render_dashboard_html(skip_login_gate=True)
 except RenderError as e:
     st.title("📊 Dashboard")
     st.info(str(e), icon="ℹ️")

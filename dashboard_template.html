@@ -481,7 +481,7 @@ const state = { program: 'All Programs', term: 'Fall 2026', campus: 'All Campuse
    this file is opened directly, outside the Streamlit app.
 ========================================================================= */
 const REAL_DATA = {
-  "generated_at": "2026-09-26 00:00 UTC",
+  "generated_at": "2026-10-11 20:34 UTC",
   "term_order": [
     "Fall 2024",
     "Spring 2025",
@@ -493,120 +493,120 @@ const REAL_DATA = {
   "term_calendar": {
     "Fall 2024": {
       "start": "2024-08-26",
-      "end": "2025-01-05"
+      "end": "2024-12-13"
     },
     "Spring 2025": {
       "start": "2025-01-06",
-      "end": "2025-05-11"
+      "end": "2025-05-02"
     },
     "Summer 2025": {
       "start": "2025-05-12",
-      "end": "2025-09-01"
+      "end": "2025-08-22"
     },
     "Fall 2025": {
       "start": "2025-09-02",
-      "end": "2026-01-04"
+      "end": "2025-12-19"
     },
     "Spring 2026": {
       "start": "2026-01-05",
-      "end": "2026-05-03"
+      "end": "2026-04-24"
     },
     "Summer 2026": {
       "start": "2026-05-04",
-      "end": "2026-08-30"
+      "end": "2026-08-21"
     }
   },
   "active_headcount_by_term": {
-    "Fall 2024": 67,
-    "Spring 2025": 137,
-    "Summer 2025": 155,
-    "Fall 2025": 207,
+    "Fall 2024": 68,
+    "Spring 2025": 135,
+    "Summer 2025": 156,
+    "Fall 2025": 208,
     "Spring 2026": 182,
-    "Summer 2026": 178
+    "Summer 2026": 180
   },
   "enrollment_by_program_term": {
     "Fall 2024": {
       "ADN (1+1)": 42,
       "PN": 24,
-      "BSN": 1
+      "BSN": 2
     },
     "Spring 2025": {
       "ADN (1+1)": 74,
-      "PN": 56,
-      "BSN": 4,
+      "PN": 53,
+      "BSN": 5,
       "RN-to-BSN": 3
     },
     "Summer 2025": {
       "PN": 92,
       "ADN (1+1)": 57,
-      "BSN": 3,
+      "BSN": 4,
       "RN-to-BSN": 3
     },
     "Fall 2025": {
       "PN": 141,
       "ADN (1+1)": 57,
-      "BSN": 6,
+      "BSN": 7,
       "RN-to-BSN": 3
     },
     "Spring 2026": {
       "PN": 129,
-      "ADN (1+1)": 44,
-      "BSN": 6,
+      "ADN (1+1)": 43,
+      "BSN": 7,
       "RN-to-BSN": 3
     },
     "Summer 2026": {
-      "PN": 135,
+      "PN": 136,
       "ADN (1+1)": 34,
-      "BSN": 9
+      "BSN": 10
     }
   },
   "retention": [
     {
       "from": "Fall 2024",
       "to": "Spring 2025",
-      "denominator": 67,
-      "retained": 56,
-      "rate": 0.8358
+      "denominator": 68,
+      "retained": 57,
+      "rate": 0.8382
     },
     {
       "from": "Spring 2025",
       "to": "Summer 2025",
-      "denominator": 137,
-      "retained": 106,
-      "rate": 0.7737
+      "denominator": 135,
+      "retained": 104,
+      "rate": 0.7704
     },
     {
       "from": "Summer 2025",
       "to": "Fall 2025",
-      "denominator": 155,
-      "retained": 140,
-      "rate": 0.9032
+      "denominator": 156,
+      "retained": 141,
+      "rate": 0.9038
     },
     {
       "from": "Fall 2025",
       "to": "Spring 2026",
-      "denominator": 207,
-      "retained": 145,
-      "rate": 0.7005
+      "denominator": 208,
+      "retained": 146,
+      "rate": 0.7019
     },
     {
       "from": "Spring 2026",
       "to": "Summer 2026",
       "denominator": 182,
-      "retained": 130,
-      "rate": 0.7143
+      "retained": 131,
+      "rate": 0.7198
     }
   ],
   "retention_by_enroll_type": {
     "Full-time (100%)": {
-      "denominator": 432,
-      "retained": 331,
-      "rate": 0.7662
+      "denominator": 436,
+      "retained": 336,
+      "rate": 0.7706
     },
     "Half-time (50%)": {
-      "denominator": 316,
-      "retained": 246,
-      "rate": 0.7785
+      "denominator": 313,
+      "retained": 243,
+      "rate": 0.7764
     }
   },
   "retention_by_program": [
@@ -614,131 +614,131 @@ const REAL_DATA = {
       "from": "Fall 2024",
       "to": "Spring 2025",
       "program": "ADN (1+1)",
-      "denominator": 42,
-      "retained": 31,
-      "rate": 0.7381
+      "denominator": 107,
+      "retained": 78,
+      "rate": 0.729
     },
     {
       "from": "Fall 2024",
       "to": "Spring 2025",
       "program": "PN",
-      "denominator": 24,
-      "retained": 24,
-      "rate": 1.0
+      "denominator": 67,
+      "retained": 44,
+      "rate": 0.6567
     },
     {
       "from": "Spring 2025",
       "to": "Summer 2025",
       "program": "ADN (1+1)",
-      "denominator": 74,
-      "retained": 57,
-      "rate": 0.7703
+      "denominator": 115,
+      "retained": 84,
+      "rate": 0.7304
     },
     {
       "from": "Spring 2025",
       "to": "Summer 2025",
       "program": "PN",
-      "denominator": 56,
-      "retained": 43,
-      "rate": 0.7679
+      "denominator": 80,
+      "retained": 56,
+      "rate": 0.7
     },
     {
       "from": "Summer 2025",
       "to": "Fall 2025",
       "program": "ADN (1+1)",
-      "denominator": 57,
-      "retained": 53,
-      "rate": 0.9298
-    },
-    {
-      "from": "Summer 2025",
-      "to": "Fall 2025",
-      "program": "PN",
       "denominator": 92,
       "retained": 81,
       "rate": 0.8804
     },
     {
+      "from": "Summer 2025",
+      "to": "Fall 2025",
+      "program": "PN",
+      "denominator": 103,
+      "retained": 76,
+      "rate": 0.7379
+    },
+    {
       "from": "Fall 2025",
       "to": "Spring 2026",
       "program": "ADN (1+1)",
-      "denominator": 57,
-      "retained": 38,
-      "rate": 0.6667
+      "denominator": 92,
+      "retained": 68,
+      "rate": 0.7391
     },
     {
       "from": "Fall 2025",
       "to": "Spring 2026",
       "program": "PN",
-      "denominator": 141,
-      "retained": 98,
-      "rate": 0.695
+      "denominator": 134,
+      "retained": 89,
+      "rate": 0.6642
     },
     {
       "from": "Spring 2026",
       "to": "Summer 2026",
       "program": "ADN (1+1)",
-      "denominator": 44,
-      "retained": 29,
-      "rate": 0.6591
+      "denominator": 73,
+      "retained": 45,
+      "rate": 0.6164
     },
     {
       "from": "Spring 2026",
       "to": "Summer 2026",
       "program": "PN",
-      "denominator": 129,
-      "retained": 95,
-      "rate": 0.7364
+      "denominator": 122,
+      "retained": 89,
+      "rate": 0.7295
     }
   ],
   "withdrawal_by_term": {
     "Fall 2024": {
       "count": 19,
-      "denominator": 67,
-      "rate": 0.2836
+      "denominator": 68,
+      "rate": 0.2794
     },
     "Spring 2025": {
       "count": 31,
-      "denominator": 137,
-      "rate": 0.2263
+      "denominator": 135,
+      "rate": 0.2296
     },
     "Summer 2025": {
       "count": 17,
-      "denominator": 155,
-      "rate": 0.1097
+      "denominator": 156,
+      "rate": 0.109
     },
     "Fall 2025": {
-      "count": 71,
-      "denominator": 207,
-      "rate": 0.343
+      "count": 59,
+      "denominator": 208,
+      "rate": 0.2837
     },
     "Spring 2026": {
-      "count": 64,
+      "count": 39,
       "denominator": 182,
-      "rate": 0.3516
+      "rate": 0.2143
     },
     "Summer 2026": {
-      "count": 25,
-      "denominator": 178,
-      "rate": 0.1404
+      "count": 21,
+      "denominator": 180,
+      "rate": 0.1167
     }
   },
   "withdrawal_reasons": {
-    "Academic Dismissal": 86,
-    "Personal": 22,
-    "Administrative Withdrawal": 37,
+    "Academic Dismissal": 69,
+    "Personal": 20,
+    "Administrative Withdrawal": 32,
     "Financial reasons": 4,
-    "No Show": 3,
+    "No Show": 2,
     "Family Issues": 4,
     "Personal Problems": 6,
-    "Not stated": 42,
+    "Not stated": 35,
     "Travel": 1,
-    "Health": 4,
-    "Family": 3,
-    "Undisclosed": 4,
-    "Academic Dishonesty": 8,
+    "Health": 3,
+    "Family": 2,
+    "Undisclosed": 2,
+    "Academic Dishonesty": 4,
     "Withdrawn": 1,
-    "Deceased": 2
+    "Deceased": 1
   },
   "withdrawal_reasons_by_term": {
     "Fall 2024": {
@@ -771,44 +771,38 @@ const REAL_DATA = {
       "Health": 1
     },
     "Fall 2025": {
-      "Academic Dismissal": 31,
-      "Not stated": 17,
-      "Administrative Withdrawal": 9,
-      "Personal": 6,
-      "Personal Problems": 2,
-      "Undisclosed": 2,
-      "Family": 1,
-      "Health": 1,
-      "No Show": 1,
-      "Academic Dishonesty": 1
+      "Academic Dismissal": 30,
+      "Not stated": 14,
+      "Administrative Withdrawal": 8,
+      "Personal": 5,
+      "Personal Problems": 2
     },
     "Spring 2026": {
-      "Academic Dismissal": 27,
-      "Not stated": 12,
-      "Administrative Withdrawal": 7,
-      "Personal": 4,
-      "Academic Dishonesty": 4,
+      "Academic Dismissal": 13,
+      "Not stated": 9,
+      "Administrative Withdrawal": 4,
+      "Personal": 3,
       "Undisclosed": 2,
       "Family Issues": 2,
       "Family": 1,
       "Health": 1,
       "No Show": 1,
+      "Academic Dishonesty": 1,
       "Withdrawn": 1,
-      "Financial reasons": 1,
-      "Deceased": 1
+      "Financial reasons": 1
     },
     "Summer 2026": {
-      "Academic Dismissal": 14,
-      "Administrative Withdrawal": 3,
-      "Not stated": 3,
+      "Academic Dismissal": 12,
       "Academic Dishonesty": 3,
+      "Administrative Withdrawal": 2,
+      "Not stated": 2,
       "Deceased": 1,
       "Personal": 1
     }
   },
   "course_pass_fail": {
-    "overall_pass_rate": 0.8357,
-    "graded_n": 4388,
+    "overall_pass_rate": 0.8388,
+    "graded_n": 4249,
     "by_course": [
       {
         "course_no": "NUR120-L",
@@ -869,10 +863,18 @@ const REAL_DATA = {
       {
         "course_no": "NUR155",
         "course_title": "Transition and Review for Practical Nurses",
-        "n": 170,
-        "passes": 106,
-        "pass_rate": 0.6235,
-        "fail_rate": 0.3765
+        "n": 154,
+        "passes": 98,
+        "pass_rate": 0.6364,
+        "fail_rate": 0.3636
+      },
+      {
+        "course_no": "NUR217",
+        "course_title": "Health Assessment w/Lab",
+        "n": 6,
+        "passes": 4,
+        "pass_rate": 0.6667,
+        "fail_rate": 0.3333
       },
       {
         "course_no": "PHARM130",
@@ -915,14 +917,6 @@ const REAL_DATA = {
         "fail_rate": 0.2535
       },
       {
-        "course_no": "NUR217",
-        "course_title": "Health Assessment w/Lab",
-        "n": 8,
-        "passes": 6,
-        "pass_rate": 0.75,
-        "fail_rate": 0.25
-      },
-      {
         "course_no": "SCI101",
         "course_title": "Anatomy w/lab",
         "n": 8,
@@ -963,20 +957,20 @@ const REAL_DATA = {
         "fail_rate": 0.2241
       },
       {
-        "course_no": "STAT101",
-        "course_title": "Introduction to Statistics",
-        "n": 48,
-        "passes": 38,
-        "pass_rate": 0.7917,
-        "fail_rate": 0.2083
+        "course_no": "PHARM205",
+        "course_title": "Pharmacology",
+        "n": 9,
+        "passes": 7,
+        "pass_rate": 0.7778,
+        "fail_rate": 0.2222
       },
       {
-        "course_no": "NUR270",
-        "course_title": "Transition into Professional Nursing Role",
-        "n": 67,
-        "passes": 54,
-        "pass_rate": 0.806,
-        "fail_rate": 0.194
+        "course_no": "NUR201",
+        "course_title": "Contemporary Nursing Practice w/Lab",
+        "n": 19,
+        "passes": 15,
+        "pass_rate": 0.7895,
+        "fail_rate": 0.2105
       },
       {
         "course_no": "NUR102",
@@ -995,20 +989,12 @@ const REAL_DATA = {
         "fail_rate": 0.1818
       },
       {
-        "course_no": "NUR201",
-        "course_title": "Contemporary Nursing Practice w/Lab",
-        "n": 22,
-        "passes": 18,
-        "pass_rate": 0.8182,
-        "fail_rate": 0.1818
-      },
-      {
-        "course_no": "NUR150",
-        "course_title": "Foundations of Adult Nursing II",
-        "n": 198,
-        "passes": 162,
-        "pass_rate": 0.8182,
-        "fail_rate": 0.1818
+        "course_no": "STAT101",
+        "course_title": "Introduction to Statistics",
+        "n": 41,
+        "passes": 34,
+        "pass_rate": 0.8293,
+        "fail_rate": 0.1707
       },
       {
         "course_no": "NUR101",
@@ -1021,18 +1007,26 @@ const REAL_DATA = {
       {
         "course_no": "PHARM225",
         "course_title": "Pharmacology for Registered Nurses",
-        "n": 103,
-        "passes": 86,
-        "pass_rate": 0.835,
-        "fail_rate": 0.165
+        "n": 78,
+        "passes": 65,
+        "pass_rate": 0.8333,
+        "fail_rate": 0.1667
       },
       {
-        "course_no": "PHARM205",
-        "course_title": "Pharmacology",
-        "n": 14,
-        "passes": 12,
-        "pass_rate": 0.8571,
-        "fail_rate": 0.1429
+        "course_no": "NUR270",
+        "course_title": "Transition into Professional Nursing Role",
+        "n": 60,
+        "passes": 51,
+        "pass_rate": 0.85,
+        "fail_rate": 0.15
+      },
+      {
+        "course_no": "NUR150",
+        "course_title": "Foundations of Adult Nursing II",
+        "n": 170,
+        "passes": 145,
+        "pass_rate": 0.8529,
+        "fail_rate": 0.1471
       },
       {
         "course_no": "AP209",
@@ -1041,14 +1035,6 @@ const REAL_DATA = {
         "passes": 40,
         "pass_rate": 0.8696,
         "fail_rate": 0.1304
-      },
-      {
-        "course_no": "NUR236",
-        "course_title": "Adult Nursing Care II w/Lab & Clinical",
-        "n": 54,
-        "passes": 47,
-        "pass_rate": 0.8704,
-        "fail_rate": 0.1296
       },
       {
         "course_no": "NUR125",
@@ -1063,6 +1049,14 @@ const REAL_DATA = {
         "course_title": "Research Inquiry and Evidence-Based Practice",
         "n": 9,
         "passes": 8,
+        "pass_rate": 0.8889,
+        "fail_rate": 0.1111
+      },
+      {
+        "course_no": "NUR236",
+        "course_title": "Adult Nursing Care II w/Lab & Clinical",
+        "n": 45,
+        "passes": 40,
         "pass_rate": 0.8889,
         "fail_rate": 0.1111
       },
@@ -1093,18 +1087,18 @@ const REAL_DATA = {
       {
         "course_no": "PSY101",
         "course_title": "Introduction to Psychology",
-        "n": 217,
-        "passes": 197,
-        "pass_rate": 0.9078,
-        "fail_rate": 0.0922
+        "n": 197,
+        "passes": 179,
+        "pass_rate": 0.9086,
+        "fail_rate": 0.0914
       },
       {
         "course_no": "SOC101",
         "course_title": "Introduction to Sociology",
-        "n": 51,
-        "passes": 47,
-        "pass_rate": 0.9216,
-        "fail_rate": 0.0784
+        "n": 36,
+        "passes": 33,
+        "pass_rate": 0.9167,
+        "fail_rate": 0.0833
       },
       {
         "course_no": "NUR205",
@@ -1126,9 +1120,9 @@ const REAL_DATA = {
         "course_no": "NUR140",
         "course_title": "Foundations of Mental Health",
         "n": 164,
-        "passes": 153,
-        "pass_rate": 0.9329,
-        "fail_rate": 0.0671
+        "passes": 154,
+        "pass_rate": 0.939,
+        "fail_rate": 0.061
       },
       {
         "course_no": "HUM200",
@@ -1245,8 +1239,8 @@ const REAL_DATA = {
       {
         "course_no": "NUR225",
         "course_title": "Adult Health Nursing Care II w/Lab & Clinical",
-        "n": 4,
-        "passes": 4,
+        "n": 3,
+        "passes": 3,
         "pass_rate": 1.0,
         "fail_rate": 0.0
       },
@@ -1357,8 +1351,8 @@ const REAL_DATA = {
       {
         "course_no": "SCI102",
         "course_title": "Physiology w/lab",
-        "n": 5,
-        "passes": 5,
+        "n": 4,
+        "passes": 4,
         "pass_rate": 1.0,
         "fail_rate": 0.0
       },
@@ -1422,136 +1416,316 @@ const REAL_DATA = {
     "highest_failure_course": {
       "course_no": "NUR155",
       "course_title": "Transition and Review for Practical Nurses",
-      "fail_rate": 0.3765,
-      "n": 170
+      "fail_rate": 0.3636,
+      "n": 154
     }
   },
   "gpa_trend_by_cohort": [
     {
+      "entry_cohort": "Fall 2017",
+      "term": "Spring 2025",
+      "avg_gpa_points": 2.9062,
+      "n": 3
+    },
+    {
+      "entry_cohort": "Fall 2022",
+      "term": "Fall 2024",
+      "avg_gpa_points": 2.7849,
+      "n": 6
+    },
+    {
+      "entry_cohort": "Fall 2022",
+      "term": "Spring 2025",
+      "avg_gpa_points": 3.2821,
+      "n": 5
+    },
+    {
+      "entry_cohort": "Fall 2023",
+      "term": "Fall 2024",
+      "avg_gpa_points": 3.0192,
+      "n": 16
+    },
+    {
+      "entry_cohort": "Fall 2023",
+      "term": "Fall 2025",
+      "avg_gpa_points": 1.763,
+      "n": 9
+    },
+    {
+      "entry_cohort": "Fall 2023",
+      "term": "Spring 2025",
+      "avg_gpa_points": 2.4988,
+      "n": 15
+    },
+    {
+      "entry_cohort": "Fall 2023",
+      "term": "Spring 2026",
+      "avg_gpa_points": 1.85,
+      "n": 7
+    },
+    {
+      "entry_cohort": "Fall 2023",
+      "term": "Summer 2025",
+      "avg_gpa_points": 2.0114,
+      "n": 9
+    },
+    {
       "entry_cohort": "Fall 2024",
       "term": "Fall 2024",
-      "avg_gpa_points": 2.7684,
-      "n": 272
+      "avg_gpa_points": 2.5021,
+      "n": 46
     },
     {
       "entry_cohort": "Fall 2024",
       "term": "Fall 2025",
-      "avg_gpa_points": 2.5,
-      "n": 106
+      "avg_gpa_points": 2.5664,
+      "n": 29
     },
     {
       "entry_cohort": "Fall 2024",
       "term": "Spring 2025",
-      "avg_gpa_points": 2.4131,
-      "n": 213
+      "avg_gpa_points": 2.5508,
+      "n": 36
     },
     {
       "entry_cohort": "Fall 2024",
       "term": "Spring 2026",
-      "avg_gpa_points": 2.55,
-      "n": 60
+      "avg_gpa_points": 2.4619,
+      "n": 22
     },
     {
       "entry_cohort": "Fall 2024",
       "term": "Summer 2025",
-      "avg_gpa_points": 2.1261,
-      "n": 111
+      "avg_gpa_points": 2.3347,
+      "n": 31
     },
     {
       "entry_cohort": "Fall 2024",
       "term": "Summer 2026",
-      "avg_gpa_points": 2.4419,
+      "avg_gpa_points": 2.0414,
+      "n": 14
+    },
+    {
+      "entry_cohort": "Fall 2025",
+      "term": "Fall 2025",
+      "avg_gpa_points": 2.4671,
+      "n": 54
+    },
+    {
+      "entry_cohort": "Fall 2025",
+      "term": "Spring 2026",
+      "avg_gpa_points": 2.4994,
       "n": 43
     },
     {
       "entry_cohort": "Fall 2025",
-      "term": "Fall 2025",
-      "avg_gpa_points": 2.7537,
-      "n": 272
-    },
-    {
-      "entry_cohort": "Fall 2025",
-      "term": "Spring 2026",
-      "avg_gpa_points": 2.5181,
-      "n": 166
-    },
-    {
-      "entry_cohort": "Fall 2025",
       "term": "Summer 2026",
-      "avg_gpa_points": 2.7538,
-      "n": 130
+      "avg_gpa_points": 2.7074,
+      "n": 37
+    },
+    {
+      "entry_cohort": "Spring 2023",
+      "term": "Fall 2024",
+      "avg_gpa_points": 2.7964,
+      "n": 12
+    },
+    {
+      "entry_cohort": "Spring 2023",
+      "term": "Fall 2025",
+      "avg_gpa_points": 2.5038,
+      "n": 3
+    },
+    {
+      "entry_cohort": "Spring 2023",
+      "term": "Spring 2025",
+      "avg_gpa_points": 3.182,
+      "n": 6
+    },
+    {
+      "entry_cohort": "Spring 2023",
+      "term": "Summer 2025",
+      "avg_gpa_points": 2.6778,
+      "n": 3
+    },
+    {
+      "entry_cohort": "Spring 2024",
+      "term": "Fall 2024",
+      "avg_gpa_points": 2.5943,
+      "n": 32
+    },
+    {
+      "entry_cohort": "Spring 2024",
+      "term": "Fall 2025",
+      "avg_gpa_points": 2.6823,
+      "n": 18
+    },
+    {
+      "entry_cohort": "Spring 2024",
+      "term": "Spring 2025",
+      "avg_gpa_points": 2.8473,
+      "n": 23
+    },
+    {
+      "entry_cohort": "Spring 2024",
+      "term": "Spring 2026",
+      "avg_gpa_points": 2.6767,
+      "n": 11
+    },
+    {
+      "entry_cohort": "Spring 2024",
+      "term": "Summer 2025",
+      "avg_gpa_points": 2.4704,
+      "n": 17
+    },
+    {
+      "entry_cohort": "Spring 2024",
+      "term": "Summer 2026",
+      "avg_gpa_points": 2.0679,
+      "n": 5
     },
     {
       "entry_cohort": "Spring 2025",
       "term": "Fall 2025",
-      "avg_gpa_points": 2.3016,
-      "n": 189
+      "avg_gpa_points": 2.1549,
+      "n": 40
     },
     {
       "entry_cohort": "Spring 2025",
       "term": "Spring 2025",
-      "avg_gpa_points": 2.6147,
-      "n": 340
+      "avg_gpa_points": 2.4836,
+      "n": 62
     },
     {
       "entry_cohort": "Spring 2025",
       "term": "Spring 2026",
-      "avg_gpa_points": 2.5935,
-      "n": 123
+      "avg_gpa_points": 2.6041,
+      "n": 35
     },
     {
       "entry_cohort": "Spring 2025",
       "term": "Summer 2025",
-      "avg_gpa_points": 2.424,
-      "n": 217
+      "avg_gpa_points": 2.2714,
+      "n": 50
     },
     {
       "entry_cohort": "Spring 2025",
       "term": "Summer 2026",
-      "avg_gpa_points": 2.3684,
-      "n": 76
+      "avg_gpa_points": 2.1754,
+      "n": 22
     },
     {
       "entry_cohort": "Spring 2026",
       "term": "Spring 2026",
-      "avg_gpa_points": 2.5208,
-      "n": 144
+      "avg_gpa_points": 2.1833,
+      "n": 32
     },
     {
       "entry_cohort": "Spring 2026",
       "term": "Summer 2026",
-      "avg_gpa_points": 2.5876,
-      "n": 97
+      "avg_gpa_points": 2.7585,
+      "n": 28
+    },
+    {
+      "entry_cohort": "Summer 2019",
+      "term": "Spring 2025",
+      "avg_gpa_points": 1.799,
+      "n": 3
+    },
+    {
+      "entry_cohort": "Summer 2023",
+      "term": "Fall 2024",
+      "avg_gpa_points": 2.6901,
+      "n": 16
+    },
+    {
+      "entry_cohort": "Summer 2023",
+      "term": "Fall 2025",
+      "avg_gpa_points": 2.4473,
+      "n": 7
+    },
+    {
+      "entry_cohort": "Summer 2023",
+      "term": "Spring 2025",
+      "avg_gpa_points": 2.6629,
+      "n": 14
+    },
+    {
+      "entry_cohort": "Summer 2023",
+      "term": "Spring 2026",
+      "avg_gpa_points": 2.6444,
+      "n": 3
+    },
+    {
+      "entry_cohort": "Summer 2023",
+      "term": "Summer 2025",
+      "avg_gpa_points": 2.837,
+      "n": 6
+    },
+    {
+      "entry_cohort": "Summer 2024",
+      "term": "Fall 2024",
+      "avg_gpa_points": 2.5632,
+      "n": 26
+    },
+    {
+      "entry_cohort": "Summer 2024",
+      "term": "Fall 2025",
+      "avg_gpa_points": 2.4311,
+      "n": 16
+    },
+    {
+      "entry_cohort": "Summer 2024",
+      "term": "Spring 2025",
+      "avg_gpa_points": 2.5955,
+      "n": 21
+    },
+    {
+      "entry_cohort": "Summer 2024",
+      "term": "Spring 2026",
+      "avg_gpa_points": 1.9852,
+      "n": 10
+    },
+    {
+      "entry_cohort": "Summer 2024",
+      "term": "Summer 2025",
+      "avg_gpa_points": 2.7868,
+      "n": 18
+    },
+    {
+      "entry_cohort": "Summer 2024",
+      "term": "Summer 2026",
+      "avg_gpa_points": 3.0619,
+      "n": 5
     },
     {
       "entry_cohort": "Summer 2025",
       "term": "Fall 2025",
-      "avg_gpa_points": 2.3548,
-      "n": 155
+      "avg_gpa_points": 2.3616,
+      "n": 40
     },
     {
       "entry_cohort": "Summer 2025",
       "term": "Spring 2026",
-      "avg_gpa_points": 2.4563,
-      "n": 103
+      "avg_gpa_points": 2.3435,
+      "n": 31
     },
     {
       "entry_cohort": "Summer 2025",
       "term": "Summer 2025",
-      "avg_gpa_points": 2.6498,
-      "n": 217
+      "avg_gpa_points": 2.4335,
+      "n": 49
     },
     {
       "entry_cohort": "Summer 2025",
       "term": "Summer 2026",
-      "avg_gpa_points": 2.2754,
-      "n": 69
+      "avg_gpa_points": 2.2935,
+      "n": 25
     },
     {
       "entry_cohort": "Summer 2026",
       "term": "Summer 2026",
-      "avg_gpa_points": 2.9581,
-      "n": 191
+      "avg_gpa_points": 2.8105,
+      "n": 42
     }
   ],
   "attendance_by_term": {
@@ -1560,51 +1734,2850 @@ const REAL_DATA = {
       "total_valid": 8037,
       "rate": 0.918
     },
+    "Fall 2025": {
+      "present": 8942,
+      "total_valid": 9874,
+      "rate": 0.9056
+    },
     "Spring 2025": {
       "present": 8449,
       "total_valid": 9419,
       "rate": 0.897
+    },
+    "Spring 2026": {
+      "present": 8832,
+      "total_valid": 9762,
+      "rate": 0.9047
     },
     "Summer 2025": {
       "present": 8367,
       "total_valid": 9250,
       "rate": 0.9045
     },
-    "Fall 2025": {
-      "present": 13460,
-      "total_valid": 14925,
-      "rate": 0.9018
-    },
-    "Spring 2026": {
-      "present": 19214,
-      "total_valid": 21125,
-      "rate": 0.9095
-    },
     "Summer 2026": {
-      "present": 10379,
-      "total_valid": 11358,
-      "rate": 0.9138
+      "present": 8745,
+      "total_valid": 9454,
+      "rate": 0.925
     }
   },
   "attendance_by_program_stage": {
-    "1": 0.8922,
-    "2": 0.912,
-    "3": 0.9247,
-    "4": 0.9091
+    "1": 0.886,
+    "2": 0.9083,
+    "3": 0.9297,
+    "4": 0.9173
+  },
+  "absenteeism_hotspots": [
+    {
+      "class_name": "AP100-A",
+      "stage": 1,
+      "n": 1645,
+      "absence_rate": 0.0869
+    },
+    {
+      "class_name": "AP100-A",
+      "stage": 2,
+      "n": 318,
+      "absence_rate": 0.1541
+    },
+    {
+      "class_name": "AP100-A",
+      "stage": 3,
+      "n": 40,
+      "absence_rate": 0.175
+    },
+    {
+      "class_name": "AP100-P",
+      "stage": 1,
+      "n": 1703,
+      "absence_rate": 0.0934
+    },
+    {
+      "class_name": "AP100-P",
+      "stage": 2,
+      "n": 122,
+      "absence_rate": 0.1393
+    },
+    {
+      "class_name": "AP100-P",
+      "stage": 3,
+      "n": 26,
+      "absence_rate": 0.0385
+    },
+    {
+      "class_name": "AP100-P2",
+      "stage": 1,
+      "n": 328,
+      "absence_rate": 0.1585
+    },
+    {
+      "class_name": "AP100-P2",
+      "stage": 2,
+      "n": 120,
+      "absence_rate": 0.075
+    },
+    {
+      "class_name": "AP100-P2",
+      "stage": 4,
+      "n": 14,
+      "absence_rate": 0.1429
+    },
+    {
+      "class_name": "AP209 -A",
+      "stage": 1,
+      "n": 326,
+      "absence_rate": 0.0859
+    },
+    {
+      "class_name": "AP209 -A",
+      "stage": 2,
+      "n": 22,
+      "absence_rate": 0.2727
+    },
+    {
+      "class_name": "AP209 -A",
+      "stage": 4,
+      "n": 61,
+      "absence_rate": 0.0164
+    },
+    {
+      "class_name": "BIO 301 - OL",
+      "stage": 3,
+      "n": 24,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "BIO 401 - OL",
+      "stage": 3,
+      "n": 21,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "COL010 - OL I",
+      "stage": 1,
+      "n": 482,
+      "absence_rate": 0.0622
+    },
+    {
+      "class_name": "COL010 - OL I",
+      "stage": 2,
+      "n": 20,
+      "absence_rate": 0.2
+    },
+    {
+      "class_name": "COL010 - OL I",
+      "stage": 3,
+      "n": 12,
+      "absence_rate": 0.1667
+    },
+    {
+      "class_name": "COL010 - OL II",
+      "stage": 1,
+      "n": 183,
+      "absence_rate": 0.0874
+    },
+    {
+      "class_name": "COL010 - OL II",
+      "stage": 2,
+      "n": 11,
+      "absence_rate": 0.2727
+    },
+    {
+      "class_name": "COL010 -A",
+      "stage": 1,
+      "n": 444,
+      "absence_rate": 0.0293
+    },
+    {
+      "class_name": "COL010 -A",
+      "stage": 2,
+      "n": 16,
+      "absence_rate": 0.0625
+    },
+    {
+      "class_name": "COM300-OL",
+      "stage": 3,
+      "n": 24,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "ENG 222 - OL",
+      "stage": 1,
+      "n": 11,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "ENG101 -A",
+      "stage": 1,
+      "n": 1415,
+      "absence_rate": 0.0841
+    },
+    {
+      "class_name": "ENG101 -A",
+      "stage": 2,
+      "n": 139,
+      "absence_rate": 0.2158
+    },
+    {
+      "class_name": "ENG101 -A",
+      "stage": 3,
+      "n": 24,
+      "absence_rate": 0.375
+    },
+    {
+      "class_name": "ENG101 -A2",
+      "stage": 1,
+      "n": 68,
+      "absence_rate": 0.0882
+    },
+    {
+      "class_name": "ENG101 -A2",
+      "stage": 2,
+      "n": 14,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "ENG101 -P",
+      "stage": 1,
+      "n": 1203,
+      "absence_rate": 0.1031
+    },
+    {
+      "class_name": "ENG101 -P",
+      "stage": 2,
+      "n": 160,
+      "absence_rate": 0.1562
+    },
+    {
+      "class_name": "ENG101 -P",
+      "stage": 3,
+      "n": 36,
+      "absence_rate": 0.0278
+    },
+    {
+      "class_name": "ENG101 -P",
+      "stage": 4,
+      "n": 26,
+      "absence_rate": 0.0769
+    },
+    {
+      "class_name": "ENG102 - OL",
+      "stage": 1,
+      "n": 201,
+      "absence_rate": 0.0448
+    },
+    {
+      "class_name": "ENG102 - OL",
+      "stage": 2,
+      "n": 113,
+      "absence_rate": 0.1239
+    },
+    {
+      "class_name": "ENG102 - OL",
+      "stage": 3,
+      "n": 61,
+      "absence_rate": 0.1475
+    },
+    {
+      "class_name": "ENG102 - OL",
+      "stage": 4,
+      "n": 90,
+      "absence_rate": 0.0667
+    },
+    {
+      "class_name": "ENG222-OL",
+      "stage": 2,
+      "n": 15,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "ENG222-OL",
+      "stage": 4,
+      "n": 15,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "HUM 300",
+      "stage": 4,
+      "n": 15,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "HUM200 -OL",
+      "stage": 1,
+      "n": 110,
+      "absence_rate": 0.1545
+    },
+    {
+      "class_name": "HUM200 -OL",
+      "stage": 2,
+      "n": 116,
+      "absence_rate": 0.0862
+    },
+    {
+      "class_name": "HUM200 -OL",
+      "stage": 3,
+      "n": 52,
+      "absence_rate": 0.0577
+    },
+    {
+      "class_name": "HUM200 -OL",
+      "stage": 4,
+      "n": 22,
+      "absence_rate": 0.1364
+    },
+    {
+      "class_name": "HUM300 -OL",
+      "stage": 3,
+      "n": 32,
+      "absence_rate": 0.0625
+    },
+    {
+      "class_name": "HUM300 -OL",
+      "stage": 4,
+      "n": 24,
+      "absence_rate": 0.2083
+    },
+    {
+      "class_name": "MATH 300",
+      "stage": 1,
+      "n": 26,
+      "absence_rate": 0.0385
+    },
+    {
+      "class_name": "MATH 300",
+      "stage": 2,
+      "n": 13,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "MATH 300",
+      "stage": 3,
+      "n": 10,
+      "absence_rate": 0.2
+    },
+    {
+      "class_name": "MATH 300",
+      "stage": 4,
+      "n": 13,
+      "absence_rate": 0.0769
+    },
+    {
+      "class_name": "MCB100 -A",
+      "stage": 1,
+      "n": 42,
+      "absence_rate": 0.0476
+    },
+    {
+      "class_name": "MCB100 -A",
+      "stage": 2,
+      "n": 99,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "MCB100 -A",
+      "stage": 3,
+      "n": 30,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "MCB100 -A",
+      "stage": 4,
+      "n": 30,
+      "absence_rate": 0.0667
+    },
+    {
+      "class_name": "NUR100 -A",
+      "stage": 1,
+      "n": 1360,
+      "absence_rate": 0.0838
+    },
+    {
+      "class_name": "NUR100 -A",
+      "stage": 2,
+      "n": 301,
+      "absence_rate": 0.0399
+    },
+    {
+      "class_name": "NUR100 -A",
+      "stage": 3,
+      "n": 33,
+      "absence_rate": 0.2424
+    },
+    {
+      "class_name": "NUR100 -A",
+      "stage": 4,
+      "n": 39,
+      "absence_rate": 0.2821
+    },
+    {
+      "class_name": "NUR100-C-A1",
+      "stage": 1,
+      "n": 68,
+      "absence_rate": 0.0735
+    },
+    {
+      "class_name": "NUR100-C-A1",
+      "stage": 2,
+      "n": 26,
+      "absence_rate": 0.0769
+    },
+    {
+      "class_name": "NUR100-C-A2",
+      "stage": 1,
+      "n": 86,
+      "absence_rate": 0.093
+    },
+    {
+      "class_name": "NUR100-C-A2",
+      "stage": 2,
+      "n": 11,
+      "absence_rate": 0.1818
+    },
+    {
+      "class_name": "NUR100-C-A3",
+      "stage": 1,
+      "n": 43,
+      "absence_rate": 0.1395
+    },
+    {
+      "class_name": "NUR100-C-A3",
+      "stage": 2,
+      "n": 28,
+      "absence_rate": 0.25
+    },
+    {
+      "class_name": "NUR100-C-A3",
+      "stage": 3,
+      "n": 9,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR100-C-A4",
+      "stage": 1,
+      "n": 29,
+      "absence_rate": 0.1034
+    },
+    {
+      "class_name": "NUR100-C-A5",
+      "stage": 1,
+      "n": 9,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR100-C-P1",
+      "stage": 1,
+      "n": 55,
+      "absence_rate": 0.1455
+    },
+    {
+      "class_name": "NUR100-C-P1",
+      "stage": 2,
+      "n": 13,
+      "absence_rate": 0.2308
+    },
+    {
+      "class_name": "NUR100-C-P2",
+      "stage": 1,
+      "n": 35,
+      "absence_rate": 0.2286
+    },
+    {
+      "class_name": "NUR100-C-P2",
+      "stage": 2,
+      "n": 14,
+      "absence_rate": 0.1429
+    },
+    {
+      "class_name": "NUR100-C-P3",
+      "stage": 1,
+      "n": 39,
+      "absence_rate": 0.1026
+    },
+    {
+      "class_name": "NUR100-L-A1",
+      "stage": 1,
+      "n": 1183,
+      "absence_rate": 0.0659
+    },
+    {
+      "class_name": "NUR100-L-A1",
+      "stage": 2,
+      "n": 171,
+      "absence_rate": 0.0468
+    },
+    {
+      "class_name": "NUR100-L-A1",
+      "stage": 3,
+      "n": 15,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR100-L-A1",
+      "stage": 4,
+      "n": 14,
+      "absence_rate": 0.7143
+    },
+    {
+      "class_name": "NUR100-L-A2",
+      "stage": 1,
+      "n": 517,
+      "absence_rate": 0.0677
+    },
+    {
+      "class_name": "NUR100-L-A2",
+      "stage": 2,
+      "n": 171,
+      "absence_rate": 0.076
+    },
+    {
+      "class_name": "NUR100-L-A2",
+      "stage": 3,
+      "n": 14,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR100-L-A2",
+      "stage": 4,
+      "n": 15,
+      "absence_rate": 0.0667
+    },
+    {
+      "class_name": "NUR100-L-A3",
+      "stage": 1,
+      "n": 31,
+      "absence_rate": 0.129
+    },
+    {
+      "class_name": "NUR100-L-A3",
+      "stage": 2,
+      "n": 15,
+      "absence_rate": 0.0667
+    },
+    {
+      "class_name": "NUR100-L-P1",
+      "stage": 1,
+      "n": 1029,
+      "absence_rate": 0.0787
+    },
+    {
+      "class_name": "NUR100-L-P1",
+      "stage": 2,
+      "n": 314,
+      "absence_rate": 0.1656
+    },
+    {
+      "class_name": "NUR100-L-P1",
+      "stage": 3,
+      "n": 48,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR100-L-P2",
+      "stage": 1,
+      "n": 419,
+      "absence_rate": 0.1146
+    },
+    {
+      "class_name": "NUR100-L-P2",
+      "stage": 2,
+      "n": 128,
+      "absence_rate": 0.25
+    },
+    {
+      "class_name": "NUR100-L-P2",
+      "stage": 3,
+      "n": 33,
+      "absence_rate": 0.0303
+    },
+    {
+      "class_name": "NUR100-L-P2",
+      "stage": 4,
+      "n": 12,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR100-P",
+      "stage": 1,
+      "n": 1444,
+      "absence_rate": 0.0762
+    },
+    {
+      "class_name": "NUR100-P",
+      "stage": 2,
+      "n": 469,
+      "absence_rate": 0.0938
+    },
+    {
+      "class_name": "NUR100-P",
+      "stage": 3,
+      "n": 81,
+      "absence_rate": 0.0123
+    },
+    {
+      "class_name": "NUR100-P",
+      "stage": 4,
+      "n": 20,
+      "absence_rate": 0.1
+    },
+    {
+      "class_name": "NUR101-A",
+      "stage": 1,
+      "n": 60,
+      "absence_rate": 0.0167
+    },
+    {
+      "class_name": "NUR101-L-A1",
+      "stage": 1,
+      "n": 11,
+      "absence_rate": 0.0909
+    },
+    {
+      "class_name": "NUR101-L-P1",
+      "stage": 1,
+      "n": 9,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR101-LA1",
+      "stage": 1,
+      "n": 15,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR101-P",
+      "stage": 1,
+      "n": 28,
+      "absence_rate": 0.0357
+    },
+    {
+      "class_name": "NUR102 - A",
+      "stage": 1,
+      "n": 716,
+      "absence_rate": 0.0587
+    },
+    {
+      "class_name": "NUR102 - A",
+      "stage": 2,
+      "n": 96,
+      "absence_rate": 0.0104
+    },
+    {
+      "class_name": "NUR102 - A",
+      "stage": 3,
+      "n": 20,
+      "absence_rate": 0.05
+    },
+    {
+      "class_name": "NUR102 - P",
+      "stage": 1,
+      "n": 437,
+      "absence_rate": 0.0435
+    },
+    {
+      "class_name": "NUR102 - P",
+      "stage": 2,
+      "n": 142,
+      "absence_rate": 0.0141
+    },
+    {
+      "class_name": "NUR102 - P",
+      "stage": 3,
+      "n": 126,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR102 - P",
+      "stage": 4,
+      "n": 18,
+      "absence_rate": 0.0556
+    },
+    {
+      "class_name": "NUR102-L-A1",
+      "stage": 1,
+      "n": 404,
+      "absence_rate": 0.1114
+    },
+    {
+      "class_name": "NUR102-L-A1",
+      "stage": 2,
+      "n": 60,
+      "absence_rate": 0.0333
+    },
+    {
+      "class_name": "NUR102-L-A1",
+      "stage": 3,
+      "n": 10,
+      "absence_rate": 0.2
+    },
+    {
+      "class_name": "NUR102-L-P1",
+      "stage": 1,
+      "n": 181,
+      "absence_rate": 0.0773
+    },
+    {
+      "class_name": "NUR102-L-P1",
+      "stage": 2,
+      "n": 58,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR102-L-P1",
+      "stage": 3,
+      "n": 56,
+      "absence_rate": 0.1071
+    },
+    {
+      "class_name": "NUR102-L-P1",
+      "stage": 4,
+      "n": 8,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR120 -P",
+      "stage": 1,
+      "n": 24,
+      "absence_rate": 0.0833
+    },
+    {
+      "class_name": "NUR120 -P",
+      "stage": 2,
+      "n": 332,
+      "absence_rate": 0.0271
+    },
+    {
+      "class_name": "NUR120 -P",
+      "stage": 3,
+      "n": 158,
+      "absence_rate": 0.1519
+    },
+    {
+      "class_name": "NUR120 -P",
+      "stage": 4,
+      "n": 6,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR120-A",
+      "stage": 1,
+      "n": 12,
+      "absence_rate": 0.0833
+    },
+    {
+      "class_name": "NUR120-A",
+      "stage": 2,
+      "n": 617,
+      "absence_rate": 0.0681
+    },
+    {
+      "class_name": "NUR120-A",
+      "stage": 3,
+      "n": 242,
+      "absence_rate": 0.062
+    },
+    {
+      "class_name": "NUR120-A",
+      "stage": 4,
+      "n": 68,
+      "absence_rate": 0.1471
+    },
+    {
+      "class_name": "NUR120-A2",
+      "stage": 2,
+      "n": 30,
+      "absence_rate": 0.0333
+    },
+    {
+      "class_name": "NUR120-A2",
+      "stage": 3,
+      "n": 15,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR120-A2",
+      "stage": 4,
+      "n": 15,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR120-C-A1",
+      "stage": 2,
+      "n": 83,
+      "absence_rate": 0.0843
+    },
+    {
+      "class_name": "NUR120-C-A1",
+      "stage": 3,
+      "n": 77,
+      "absence_rate": 0.1169
+    },
+    {
+      "class_name": "NUR120-C-A1",
+      "stage": 4,
+      "n": 18,
+      "absence_rate": 0.2778
+    },
+    {
+      "class_name": "NUR120-C-A2",
+      "stage": 2,
+      "n": 161,
+      "absence_rate": 0.0248
+    },
+    {
+      "class_name": "NUR120-C-A2",
+      "stage": 3,
+      "n": 16,
+      "absence_rate": 0.125
+    },
+    {
+      "class_name": "NUR120-C-A2",
+      "stage": 4,
+      "n": 11,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR120-C-P1",
+      "stage": 1,
+      "n": 7,
+      "absence_rate": 0.1429
+    },
+    {
+      "class_name": "NUR120-C-P1",
+      "stage": 2,
+      "n": 52,
+      "absence_rate": 0.0769
+    },
+    {
+      "class_name": "NUR120-C-P1",
+      "stage": 3,
+      "n": 62,
+      "absence_rate": 0.0161
+    },
+    {
+      "class_name": "NUR120-C-P1",
+      "stage": 4,
+      "n": 11,
+      "absence_rate": 0.0909
+    },
+    {
+      "class_name": "NUR120-C-P2",
+      "stage": 2,
+      "n": 95,
+      "absence_rate": 0.0632
+    },
+    {
+      "class_name": "NUR120-C-P2",
+      "stage": 3,
+      "n": 71,
+      "absence_rate": 0.0704
+    },
+    {
+      "class_name": "NUR120-C-P2",
+      "stage": 4,
+      "n": 19,
+      "absence_rate": 0.0526
+    },
+    {
+      "class_name": "NUR120-C-P3",
+      "stage": 2,
+      "n": 31,
+      "absence_rate": 0.0645
+    },
+    {
+      "class_name": "NUR120-C-P3",
+      "stage": 3,
+      "n": 14,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR120-C-P3",
+      "stage": 4,
+      "n": 6,
+      "absence_rate": 0.1667
+    },
+    {
+      "class_name": "NUR120-L-A1",
+      "stage": 1,
+      "n": 7,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR120-L-A1",
+      "stage": 2,
+      "n": 169,
+      "absence_rate": 0.0414
+    },
+    {
+      "class_name": "NUR120-L-A1",
+      "stage": 3,
+      "n": 51,
+      "absence_rate": 0.2353
+    },
+    {
+      "class_name": "NUR120-L-A1",
+      "stage": 4,
+      "n": 24,
+      "absence_rate": 0.125
+    },
+    {
+      "class_name": "NUR120-L-A2",
+      "stage": 2,
+      "n": 30,
+      "absence_rate": 0.1333
+    },
+    {
+      "class_name": "NUR120-L-A2",
+      "stage": 3,
+      "n": 24,
+      "absence_rate": 0.1667
+    },
+    {
+      "class_name": "NUR120-L-A2",
+      "stage": 4,
+      "n": 10,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR120-L-P1",
+      "stage": 2,
+      "n": 168,
+      "absence_rate": 0.0833
+    },
+    {
+      "class_name": "NUR120-L-P1",
+      "stage": 3,
+      "n": 135,
+      "absence_rate": 0.0667
+    },
+    {
+      "class_name": "NUR120-L-P1",
+      "stage": 4,
+      "n": 17,
+      "absence_rate": 0.1765
+    },
+    {
+      "class_name": "NUR120-P",
+      "stage": 2,
+      "n": 269,
+      "absence_rate": 0.026
+    },
+    {
+      "class_name": "NUR120-P",
+      "stage": 3,
+      "n": 224,
+      "absence_rate": 0.0089
+    },
+    {
+      "class_name": "NUR120-P",
+      "stage": 4,
+      "n": 93,
+      "absence_rate": 0.043
+    },
+    {
+      "class_name": "NUR125-A",
+      "stage": 1,
+      "n": 34,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR125-A",
+      "stage": 2,
+      "n": 561,
+      "absence_rate": 0.0463
+    },
+    {
+      "class_name": "NUR125-A",
+      "stage": 3,
+      "n": 155,
+      "absence_rate": 0.0839
+    },
+    {
+      "class_name": "NUR125-L-A1",
+      "stage": 1,
+      "n": 34,
+      "absence_rate": 0.0588
+    },
+    {
+      "class_name": "NUR125-L-A1",
+      "stage": 2,
+      "n": 550,
+      "absence_rate": 0.04
+    },
+    {
+      "class_name": "NUR125-L-A1",
+      "stage": 3,
+      "n": 141,
+      "absence_rate": 0.1206
+    },
+    {
+      "class_name": "NUR125-L-P1",
+      "stage": 1,
+      "n": 41,
+      "absence_rate": 0.3171
+    },
+    {
+      "class_name": "NUR125-L-P1",
+      "stage": 2,
+      "n": 543,
+      "absence_rate": 0.0442
+    },
+    {
+      "class_name": "NUR125-L-P1",
+      "stage": 3,
+      "n": 195,
+      "absence_rate": 0.0923
+    },
+    {
+      "class_name": "NUR125-L-P1",
+      "stage": 4,
+      "n": 50,
+      "absence_rate": 0.1
+    },
+    {
+      "class_name": "NUR125-L-P2",
+      "stage": 2,
+      "n": 33,
+      "absence_rate": 0.0303
+    },
+    {
+      "class_name": "NUR125-L-P2",
+      "stage": 3,
+      "n": 33,
+      "absence_rate": 0.0909
+    },
+    {
+      "class_name": "NUR125-P",
+      "stage": 1,
+      "n": 43,
+      "absence_rate": 0.1163
+    },
+    {
+      "class_name": "NUR125-P",
+      "stage": 2,
+      "n": 647,
+      "absence_rate": 0.0433
+    },
+    {
+      "class_name": "NUR125-P",
+      "stage": 3,
+      "n": 230,
+      "absence_rate": 0.0522
+    },
+    {
+      "class_name": "NUR125-P",
+      "stage": 4,
+      "n": 55,
+      "absence_rate": 0.0727
+    },
+    {
+      "class_name": "NUR135-A",
+      "stage": 1,
+      "n": 9,
+      "absence_rate": 0.1111
+    },
+    {
+      "class_name": "NUR135-A",
+      "stage": 2,
+      "n": 218,
+      "absence_rate": 0.0321
+    },
+    {
+      "class_name": "NUR135-A",
+      "stage": 3,
+      "n": 151,
+      "absence_rate": 0.0728
+    },
+    {
+      "class_name": "NUR135-A",
+      "stage": 4,
+      "n": 32,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR135-C-A1",
+      "stage": 2,
+      "n": 13,
+      "absence_rate": 0.2308
+    },
+    {
+      "class_name": "NUR135-C-A1",
+      "stage": 3,
+      "n": 12,
+      "absence_rate": 0.4167
+    },
+    {
+      "class_name": "NUR135-C-A2",
+      "stage": 2,
+      "n": 12,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR135-C-A2",
+      "stage": 3,
+      "n": 13,
+      "absence_rate": 0.0769
+    },
+    {
+      "class_name": "NUR135-C-A3",
+      "stage": 3,
+      "n": 7,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR135-C-A4",
+      "stage": 3,
+      "n": 5,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR135-C-P1",
+      "stage": 2,
+      "n": 10,
+      "absence_rate": 0.4
+    },
+    {
+      "class_name": "NUR135-C-P1",
+      "stage": 3,
+      "n": 10,
+      "absence_rate": 0.1
+    },
+    {
+      "class_name": "NUR135-L-A1",
+      "stage": 2,
+      "n": 27,
+      "absence_rate": 0.3704
+    },
+    {
+      "class_name": "NUR135-L-A1",
+      "stage": 3,
+      "n": 18,
+      "absence_rate": 0.2222
+    },
+    {
+      "class_name": "NUR135-L-A1",
+      "stage": 4,
+      "n": 5,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR135-L-P1",
+      "stage": 2,
+      "n": 24,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR135-L-P1",
+      "stage": 3,
+      "n": 40,
+      "absence_rate": 0.025
+    },
+    {
+      "class_name": "NUR135-L-P1",
+      "stage": 4,
+      "n": 10,
+      "absence_rate": 0.1
+    },
+    {
+      "class_name": "NUR135-P",
+      "stage": 1,
+      "n": 11,
+      "absence_rate": 0.3636
+    },
+    {
+      "class_name": "NUR135-P",
+      "stage": 2,
+      "n": 252,
+      "absence_rate": 0.0437
+    },
+    {
+      "class_name": "NUR135-P",
+      "stage": 3,
+      "n": 393,
+      "absence_rate": 0.0305
+    },
+    {
+      "class_name": "NUR135-P",
+      "stage": 4,
+      "n": 68,
+      "absence_rate": 0.0882
+    },
+    {
+      "class_name": "NUR135-S-A2",
+      "stage": 2,
+      "n": 8,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR140 -C-A1",
+      "stage": 3,
+      "n": 26,
+      "absence_rate": 0.1923
+    },
+    {
+      "class_name": "NUR140 -C-A1",
+      "stage": 4,
+      "n": 24,
+      "absence_rate": 0.125
+    },
+    {
+      "class_name": "NUR140 -C-A2",
+      "stage": 3,
+      "n": 28,
+      "absence_rate": 0.1071
+    },
+    {
+      "class_name": "NUR140 -C-A2",
+      "stage": 4,
+      "n": 14,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR140 -C-P1",
+      "stage": 3,
+      "n": 39,
+      "absence_rate": 0.2308
+    },
+    {
+      "class_name": "NUR140 -C-P1",
+      "stage": 4,
+      "n": 5,
+      "absence_rate": 0.2
+    },
+    {
+      "class_name": "NUR140 -C-P2",
+      "stage": 4,
+      "n": 10,
+      "absence_rate": 0.2
+    },
+    {
+      "class_name": "NUR140 -C-P3",
+      "stage": 3,
+      "n": 13,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR140-A",
+      "stage": 1,
+      "n": 10,
+      "absence_rate": 0.1
+    },
+    {
+      "class_name": "NUR140-A",
+      "stage": 2,
+      "n": 8,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR140-A",
+      "stage": 3,
+      "n": 423,
+      "absence_rate": 0.0402
+    },
+    {
+      "class_name": "NUR140-A",
+      "stage": 4,
+      "n": 225,
+      "absence_rate": 0.0356
+    },
+    {
+      "class_name": "NUR140-C-A1",
+      "stage": 3,
+      "n": 11,
+      "absence_rate": 0.1818
+    },
+    {
+      "class_name": "NUR140-C-P1",
+      "stage": 3,
+      "n": 6,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR140-C-P1",
+      "stage": 4,
+      "n": 5,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR140-C-P2",
+      "stage": 2,
+      "n": 6,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR140-C-P2",
+      "stage": 3,
+      "n": 18,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR140-C-P2",
+      "stage": 4,
+      "n": 6,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR140-P",
+      "stage": 2,
+      "n": 24,
+      "absence_rate": 0.125
+    },
+    {
+      "class_name": "NUR140-P",
+      "stage": 3,
+      "n": 160,
+      "absence_rate": 0.0938
+    },
+    {
+      "class_name": "NUR140-P",
+      "stage": 4,
+      "n": 67,
+      "absence_rate": 0.1343
+    },
+    {
+      "class_name": "NUR145 - A",
+      "stage": 1,
+      "n": 21,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR145 - A",
+      "stage": 2,
+      "n": 21,
+      "absence_rate": 0.1429
+    },
+    {
+      "class_name": "NUR145 - A",
+      "stage": 3,
+      "n": 120,
+      "absence_rate": 0.0333
+    },
+    {
+      "class_name": "NUR145 - P",
+      "stage": 3,
+      "n": 321,
+      "absence_rate": 0.053
+    },
+    {
+      "class_name": "NUR145 - P",
+      "stage": 4,
+      "n": 290,
+      "absence_rate": 0.0483
+    },
+    {
+      "class_name": "NUR145-C-A1",
+      "stage": 3,
+      "n": 6,
+      "absence_rate": 0.1667
+    },
+    {
+      "class_name": "NUR145-C-A1",
+      "stage": 4,
+      "n": 16,
+      "absence_rate": 0.125
+    },
+    {
+      "class_name": "NUR145-C-A2",
+      "stage": 3,
+      "n": 19,
+      "absence_rate": 0.0526
+    },
+    {
+      "class_name": "NUR145-C-A2",
+      "stage": 4,
+      "n": 9,
+      "absence_rate": 0.1111
+    },
+    {
+      "class_name": "NUR145-C-A3",
+      "stage": 3,
+      "n": 11,
+      "absence_rate": 0.1818
+    },
+    {
+      "class_name": "NUR145-C-A3",
+      "stage": 4,
+      "n": 11,
+      "absence_rate": 0.0909
+    },
+    {
+      "class_name": "NUR145-L-A",
+      "stage": 3,
+      "n": 15,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR145-L-P",
+      "stage": 3,
+      "n": 16,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR145-L-P",
+      "stage": 4,
+      "n": 22,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR145-S-A1",
+      "stage": 3,
+      "n": 5,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150 -A",
+      "stage": 1,
+      "n": 9,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150 -A",
+      "stage": 2,
+      "n": 139,
+      "absence_rate": 0.0791
+    },
+    {
+      "class_name": "NUR150 -A",
+      "stage": 3,
+      "n": 554,
+      "absence_rate": 0.0199
+    },
+    {
+      "class_name": "NUR150 -A",
+      "stage": 4,
+      "n": 151,
+      "absence_rate": 0.0397
+    },
+    {
+      "class_name": "NUR150 -L-A1",
+      "stage": 2,
+      "n": 48,
+      "absence_rate": 0.0417
+    },
+    {
+      "class_name": "NUR150 -L-A1",
+      "stage": 3,
+      "n": 132,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150 -L-A1",
+      "stage": 4,
+      "n": 30,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150-C-A1",
+      "stage": 2,
+      "n": 27,
+      "absence_rate": 0.2222
+    },
+    {
+      "class_name": "NUR150-C-A1",
+      "stage": 3,
+      "n": 56,
+      "absence_rate": 0.0714
+    },
+    {
+      "class_name": "NUR150-C-A1",
+      "stage": 4,
+      "n": 36,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150-C-A2",
+      "stage": 2,
+      "n": 34,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150-C-A2",
+      "stage": 3,
+      "n": 79,
+      "absence_rate": 0.0506
+    },
+    {
+      "class_name": "NUR150-C-A2",
+      "stage": 4,
+      "n": 12,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150-C-A3",
+      "stage": 2,
+      "n": 28,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150-C-A3",
+      "stage": 3,
+      "n": 56,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150-C-A3",
+      "stage": 4,
+      "n": 6,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150-C-A4",
+      "stage": 3,
+      "n": 27,
+      "absence_rate": 0.2963
+    },
+    {
+      "class_name": "NUR150-C-A4",
+      "stage": 4,
+      "n": 26,
+      "absence_rate": 0.0769
+    },
+    {
+      "class_name": "NUR150-C-A5",
+      "stage": 3,
+      "n": 53,
+      "absence_rate": 0.0566
+    },
+    {
+      "class_name": "NUR150-C-A5",
+      "stage": 4,
+      "n": 31,
+      "absence_rate": 0.0645
+    },
+    {
+      "class_name": "NUR150-C-P1",
+      "stage": 2,
+      "n": 21,
+      "absence_rate": 0.0476
+    },
+    {
+      "class_name": "NUR150-C-P1",
+      "stage": 3,
+      "n": 21,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150-C-P1",
+      "stage": 4,
+      "n": 14,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150-C-P2",
+      "stage": 2,
+      "n": 17,
+      "absence_rate": 0.0588
+    },
+    {
+      "class_name": "NUR150-C-P2",
+      "stage": 3,
+      "n": 24,
+      "absence_rate": 0.0417
+    },
+    {
+      "class_name": "NUR150-C-P2",
+      "stage": 4,
+      "n": 6,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150-C-P3",
+      "stage": 2,
+      "n": 6,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150-C-P3",
+      "stage": 3,
+      "n": 6,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150-C-P3",
+      "stage": 4,
+      "n": 24,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150-C-P4",
+      "stage": 2,
+      "n": 7,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150-C-P4",
+      "stage": 3,
+      "n": 28,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150-C-P4",
+      "stage": 4,
+      "n": 14,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150-L-P1",
+      "stage": 2,
+      "n": 54,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150-L-P1",
+      "stage": 3,
+      "n": 69,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR150-L-P1",
+      "stage": 4,
+      "n": 65,
+      "absence_rate": 0.0154
+    },
+    {
+      "class_name": "NUR150-P",
+      "stage": 2,
+      "n": 195,
+      "absence_rate": 0.0051
+    },
+    {
+      "class_name": "NUR150-P",
+      "stage": 3,
+      "n": 311,
+      "absence_rate": 0.0193
+    },
+    {
+      "class_name": "NUR150-P",
+      "stage": 4,
+      "n": 297,
+      "absence_rate": 0.0202
+    },
+    {
+      "class_name": "NUR155 - V2",
+      "stage": 1,
+      "n": 14,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR155-A",
+      "stage": 3,
+      "n": 175,
+      "absence_rate": 0.1371
+    },
+    {
+      "class_name": "NUR155-A",
+      "stage": 4,
+      "n": 151,
+      "absence_rate": 0.0927
+    },
+    {
+      "class_name": "NUR155-P",
+      "stage": 1,
+      "n": 25,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR155-P",
+      "stage": 2,
+      "n": 30,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR155-P",
+      "stage": 3,
+      "n": 311,
+      "absence_rate": 0.0225
+    },
+    {
+      "class_name": "NUR155-P",
+      "stage": 4,
+      "n": 542,
+      "absence_rate": 0.0295
+    },
+    {
+      "class_name": "NUR201-A",
+      "stage": 1,
+      "n": 186,
+      "absence_rate": 0.0806
+    },
+    {
+      "class_name": "NUR201-A",
+      "stage": 2,
+      "n": 8,
+      "absence_rate": 0.125
+    },
+    {
+      "class_name": "NUR201-A",
+      "stage": 4,
+      "n": 10,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR201-L-A",
+      "stage": 1,
+      "n": 166,
+      "absence_rate": 0.1024
+    },
+    {
+      "class_name": "NUR201-L-A",
+      "stage": 2,
+      "n": 6,
+      "absence_rate": 0.1667
+    },
+    {
+      "class_name": "NUR201-L-A",
+      "stage": 4,
+      "n": 8,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR205 -P",
+      "stage": 1,
+      "n": 101,
+      "absence_rate": 0.0495
+    },
+    {
+      "class_name": "NUR205 -P",
+      "stage": 2,
+      "n": 73,
+      "absence_rate": 0.0548
+    },
+    {
+      "class_name": "NUR205 -P",
+      "stage": 4,
+      "n": 64,
+      "absence_rate": 0.0469
+    },
+    {
+      "class_name": "NUR205-L-P1",
+      "stage": 1,
+      "n": 65,
+      "absence_rate": 0.0615
+    },
+    {
+      "class_name": "NUR205-L-P1",
+      "stage": 2,
+      "n": 50,
+      "absence_rate": 0.18
+    },
+    {
+      "class_name": "NUR205-L-P1",
+      "stage": 4,
+      "n": 24,
+      "absence_rate": 0.0833
+    },
+    {
+      "class_name": "NUR216 -A",
+      "stage": 1,
+      "n": 23,
+      "absence_rate": 0.087
+    },
+    {
+      "class_name": "NUR216 -A",
+      "stage": 2,
+      "n": 86,
+      "absence_rate": 0.0116
+    },
+    {
+      "class_name": "NUR216 -A",
+      "stage": 3,
+      "n": 24,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR216 -A",
+      "stage": 4,
+      "n": 101,
+      "absence_rate": 0.0594
+    },
+    {
+      "class_name": "NUR216 -P",
+      "stage": 1,
+      "n": 66,
+      "absence_rate": 0.0606
+    },
+    {
+      "class_name": "NUR216 -P",
+      "stage": 2,
+      "n": 11,
+      "absence_rate": 0.0909
+    },
+    {
+      "class_name": "NUR216-A-L",
+      "stage": 2,
+      "n": 18,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR216-A-L",
+      "stage": 3,
+      "n": 8,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR216-A-L",
+      "stage": 4,
+      "n": 21,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR216-C-P1",
+      "stage": 1,
+      "n": 16,
+      "absence_rate": 0.0625
+    },
+    {
+      "class_name": "NUR216-C-P1",
+      "stage": 2,
+      "n": 14,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR216-C-P1",
+      "stage": 4,
+      "n": 9,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR216-C-P2",
+      "stage": 2,
+      "n": 6,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR216-C-P2",
+      "stage": 4,
+      "n": 15,
+      "absence_rate": 0.0667
+    },
+    {
+      "class_name": "NUR216-L-A",
+      "stage": 1,
+      "n": 5,
+      "absence_rate": 0.4
+    },
+    {
+      "class_name": "NUR216-L-A",
+      "stage": 4,
+      "n": 13,
+      "absence_rate": 0.1538
+    },
+    {
+      "class_name": "NUR216-L-P1",
+      "stage": 1,
+      "n": 24,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR216-L-P1",
+      "stage": 2,
+      "n": 11,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR217-C-A1",
+      "stage": 3,
+      "n": 6,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR217-L-P1",
+      "stage": 1,
+      "n": 13,
+      "absence_rate": 0.2308
+    },
+    {
+      "class_name": "NUR217-P",
+      "stage": 1,
+      "n": 8,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR217-P",
+      "stage": 2,
+      "n": 50,
+      "absence_rate": 0.04
+    },
+    {
+      "class_name": "NUR217-P",
+      "stage": 3,
+      "n": 19,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR221-A",
+      "stage": 3,
+      "n": 49,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR221-A",
+      "stage": 4,
+      "n": 6,
+      "absence_rate": 0.6667
+    },
+    {
+      "class_name": "NUR221-C-A1",
+      "stage": 3,
+      "n": 21,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR221-L-A1",
+      "stage": 3,
+      "n": 24,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR221-P",
+      "stage": 2,
+      "n": 7,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR225-C-P1",
+      "stage": 4,
+      "n": 6,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR225-P",
+      "stage": 4,
+      "n": 12,
+      "absence_rate": 0.0833
+    },
+    {
+      "class_name": "NUR235 - P",
+      "stage": 1,
+      "n": 31,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR235-C-P1",
+      "stage": 1,
+      "n": 6,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR236-C-P1",
+      "stage": 3,
+      "n": 12,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR236-C-P1",
+      "stage": 4,
+      "n": 6,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR236-C-P3",
+      "stage": 1,
+      "n": 6,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR236-C-P3",
+      "stage": 2,
+      "n": 6,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR236-L-P1",
+      "stage": 1,
+      "n": 16,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR236-L-P1",
+      "stage": 2,
+      "n": 24,
+      "absence_rate": 0.0417
+    },
+    {
+      "class_name": "NUR236-L-P1",
+      "stage": 3,
+      "n": 20,
+      "absence_rate": 0.05
+    },
+    {
+      "class_name": "NUR236-L-P1",
+      "stage": 4,
+      "n": 5,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR236-P",
+      "stage": 1,
+      "n": 20,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR236-P",
+      "stage": 2,
+      "n": 45,
+      "absence_rate": 0.0889
+    },
+    {
+      "class_name": "NUR236-P",
+      "stage": 3,
+      "n": 55,
+      "absence_rate": 0.0182
+    },
+    {
+      "class_name": "NUR236-P",
+      "stage": 4,
+      "n": 13,
+      "absence_rate": 0.0769
+    },
+    {
+      "class_name": "NUR245 - P",
+      "stage": 1,
+      "n": 22,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR245 - P",
+      "stage": 2,
+      "n": 36,
+      "absence_rate": 0.0556
+    },
+    {
+      "class_name": "NUR245 - P",
+      "stage": 3,
+      "n": 49,
+      "absence_rate": 0.0408
+    },
+    {
+      "class_name": "NUR245 - P",
+      "stage": 4,
+      "n": 34,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR245-C-P1",
+      "stage": 2,
+      "n": 11,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR245-C-P1",
+      "stage": 3,
+      "n": 12,
+      "absence_rate": 0.0833
+    },
+    {
+      "class_name": "NUR245-C-P1",
+      "stage": 4,
+      "n": 7,
+      "absence_rate": 0.2857
+    },
+    {
+      "class_name": "NUR255 -P",
+      "stage": 1,
+      "n": 84,
+      "absence_rate": 0.0119
+    },
+    {
+      "class_name": "NUR255 -P",
+      "stage": 2,
+      "n": 32,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR255 -P",
+      "stage": 3,
+      "n": 32,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR255 -P",
+      "stage": 4,
+      "n": 50,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR255-C-P1",
+      "stage": 1,
+      "n": 8,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR255-C-P1",
+      "stage": 2,
+      "n": 5,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR255-C-P1",
+      "stage": 3,
+      "n": 8,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR255-C-P1",
+      "stage": 4,
+      "n": 10,
+      "absence_rate": 0.1
+    },
+    {
+      "class_name": "NUR255-C-P2",
+      "stage": 1,
+      "n": 6,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR265 -P",
+      "stage": 1,
+      "n": 40,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR265 -P",
+      "stage": 3,
+      "n": 33,
+      "absence_rate": 0.0303
+    },
+    {
+      "class_name": "NUR265 -P",
+      "stage": 4,
+      "n": 34,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR265-C-P1",
+      "stage": 1,
+      "n": 12,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR265-C-P2",
+      "stage": 4,
+      "n": 6,
+      "absence_rate": 0.1667
+    },
+    {
+      "class_name": "NUR270-A",
+      "stage": 4,
+      "n": 47,
+      "absence_rate": 0.0638
+    },
+    {
+      "class_name": "NUR270-P",
+      "stage": 1,
+      "n": 91,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR270-P",
+      "stage": 2,
+      "n": 76,
+      "absence_rate": 0.0132
+    },
+    {
+      "class_name": "NUR270-P",
+      "stage": 3,
+      "n": 39,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR270-P",
+      "stage": 4,
+      "n": 28,
+      "absence_rate": 0.0357
+    },
+    {
+      "class_name": "NUR290 -A-1",
+      "stage": 2,
+      "n": 12,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR300",
+      "stage": 4,
+      "n": 5,
+      "absence_rate": 0.2
+    },
+    {
+      "class_name": "NUR301 - OL",
+      "stage": 1,
+      "n": 15,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR302 - OL",
+      "stage": 1,
+      "n": 21,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR303",
+      "stage": 4,
+      "n": 16,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR303 - OL",
+      "stage": 2,
+      "n": 27,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR304",
+      "stage": 4,
+      "n": 9,
+      "absence_rate": 0.1111
+    },
+    {
+      "class_name": "NUR304 - A",
+      "stage": 3,
+      "n": 45,
+      "absence_rate": 0.1333
+    },
+    {
+      "class_name": "NUR304 - OL",
+      "stage": 1,
+      "n": 21,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR305",
+      "stage": 4,
+      "n": 5,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR305 - OL",
+      "stage": 1,
+      "n": 21,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR401 - OL",
+      "stage": 2,
+      "n": 21,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR402 - OL",
+      "stage": 2,
+      "n": 24,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR403 - OL",
+      "stage": 2,
+      "n": 21,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR404",
+      "stage": 3,
+      "n": 42,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUR404",
+      "stage": 4,
+      "n": 45,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUT100 -OL",
+      "stage": 1,
+      "n": 77,
+      "absence_rate": 0.1818
+    },
+    {
+      "class_name": "NUT100 -OL",
+      "stage": 2,
+      "n": 1099,
+      "absence_rate": 0.0874
+    },
+    {
+      "class_name": "NUT100 -OL",
+      "stage": 3,
+      "n": 121,
+      "absence_rate": 0.1157
+    },
+    {
+      "class_name": "NUT100 -OL",
+      "stage": 4,
+      "n": 55,
+      "absence_rate": 0.1091
+    },
+    {
+      "class_name": "NUT100 -OL II",
+      "stage": 1,
+      "n": 261,
+      "absence_rate": 0.0805
+    },
+    {
+      "class_name": "NUT100 -OL II",
+      "stage": 2,
+      "n": 593,
+      "absence_rate": 0.0961
+    },
+    {
+      "class_name": "NUT100 -OL II",
+      "stage": 3,
+      "n": 28,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "NUT100 -OL II",
+      "stage": 4,
+      "n": 14,
+      "absence_rate": 0.0714
+    },
+    {
+      "class_name": "PHARM100-A",
+      "stage": 1,
+      "n": 560,
+      "absence_rate": 0.1571
+    },
+    {
+      "class_name": "PHARM100-A",
+      "stage": 2,
+      "n": 96,
+      "absence_rate": 0.1042
+    },
+    {
+      "class_name": "PHARM100-P",
+      "stage": 1,
+      "n": 611,
+      "absence_rate": 0.0458
+    },
+    {
+      "class_name": "PHARM100-P",
+      "stage": 2,
+      "n": 105,
+      "absence_rate": 0.0381
+    },
+    {
+      "class_name": "PHARM100-P",
+      "stage": 3,
+      "n": 18,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "PHARM100-P-1",
+      "stage": 2,
+      "n": 80,
+      "absence_rate": 0.0125
+    },
+    {
+      "class_name": "PHARM100-P-1",
+      "stage": 3,
+      "n": 10,
+      "absence_rate": 0.1
+    },
+    {
+      "class_name": "PHARM100-P-1",
+      "stage": 4,
+      "n": 10,
+      "absence_rate": 0.1
+    },
+    {
+      "class_name": "PHARM100-P2",
+      "stage": 1,
+      "n": 154,
+      "absence_rate": 0.2208
+    },
+    {
+      "class_name": "PHARM100-P2",
+      "stage": 2,
+      "n": 79,
+      "absence_rate": 0.0886
+    },
+    {
+      "class_name": "PHARM100-P2",
+      "stage": 3,
+      "n": 19,
+      "absence_rate": 0.0526
+    },
+    {
+      "class_name": "PHARM100-P2",
+      "stage": 4,
+      "n": 10,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "PHARM130-A",
+      "stage": 1,
+      "n": 12,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "PHARM130-A",
+      "stage": 2,
+      "n": 973,
+      "absence_rate": 0.0401
+    },
+    {
+      "class_name": "PHARM130-A",
+      "stage": 3,
+      "n": 264,
+      "absence_rate": 0.072
+    },
+    {
+      "class_name": "PHARM130-A",
+      "stage": 4,
+      "n": 156,
+      "absence_rate": 0.0705
+    },
+    {
+      "class_name": "PHARM130-P",
+      "stage": 1,
+      "n": 38,
+      "absence_rate": 0.1842
+    },
+    {
+      "class_name": "PHARM130-P",
+      "stage": 2,
+      "n": 724,
+      "absence_rate": 0.047
+    },
+    {
+      "class_name": "PHARM130-P",
+      "stage": 3,
+      "n": 355,
+      "absence_rate": 0.0479
+    },
+    {
+      "class_name": "PHARM130-P",
+      "stage": 4,
+      "n": 50,
+      "absence_rate": 0.32
+    },
+    {
+      "class_name": "PHARM205 P_B",
+      "stage": 3,
+      "n": 16,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "PHARM205-A_P",
+      "stage": 3,
+      "n": 42,
+      "absence_rate": 0.0714
+    },
+    {
+      "class_name": "PHARM205-B_P",
+      "stage": 3,
+      "n": 42,
+      "absence_rate": 0.1667
+    },
+    {
+      "class_name": "PHARM205-P_A",
+      "stage": 2,
+      "n": 34,
+      "absence_rate": 0.1176
+    },
+    {
+      "class_name": "PHARM205-P_A",
+      "stage": 4,
+      "n": 6,
+      "absence_rate": 0.3333
+    },
+    {
+      "class_name": "PHARM225-A_P",
+      "stage": 1,
+      "n": 14,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "PHARM225-A_P",
+      "stage": 2,
+      "n": 32,
+      "absence_rate": 0.0938
+    },
+    {
+      "class_name": "PHARM225-A_P",
+      "stage": 4,
+      "n": 70,
+      "absence_rate": 0.0429
+    },
+    {
+      "class_name": "PHARM225-B_P",
+      "stage": 3,
+      "n": 14,
+      "absence_rate": 0.0714
+    },
+    {
+      "class_name": "PHARM225-P_ A",
+      "stage": 1,
+      "n": 81,
+      "absence_rate": 0.0864
+    },
+    {
+      "class_name": "PHARM225-P_ A",
+      "stage": 2,
+      "n": 72,
+      "absence_rate": 0.0972
+    },
+    {
+      "class_name": "PHARM225-P_ A",
+      "stage": 3,
+      "n": 22,
+      "absence_rate": 0.1818
+    },
+    {
+      "class_name": "PHARM225-P_ A",
+      "stage": 4,
+      "n": 18,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "PHARM225-P_B",
+      "stage": 2,
+      "n": 45,
+      "absence_rate": 0.0444
+    },
+    {
+      "class_name": "PHARM225-P_B",
+      "stage": 3,
+      "n": 25,
+      "absence_rate": 0.04
+    },
+    {
+      "class_name": "PHARM225-P_B",
+      "stage": 4,
+      "n": 6,
+      "absence_rate": 0.1667
+    },
+    {
+      "class_name": "PSY101 -A",
+      "stage": 1,
+      "n": 558,
+      "absence_rate": 0.0932
+    },
+    {
+      "class_name": "PSY101 -A",
+      "stage": 2,
+      "n": 52,
+      "absence_rate": 0.2308
+    },
+    {
+      "class_name": "PSY101 -OL",
+      "stage": 1,
+      "n": 1043,
+      "absence_rate": 0.0959
+    },
+    {
+      "class_name": "PSY101 -OL",
+      "stage": 2,
+      "n": 403,
+      "absence_rate": 0.0695
+    },
+    {
+      "class_name": "PSY101 -OL",
+      "stage": 3,
+      "n": 96,
+      "absence_rate": 0.0312
+    },
+    {
+      "class_name": "PSY101 -OL",
+      "stage": 4,
+      "n": 42,
+      "absence_rate": 0.0952
+    },
+    {
+      "class_name": "PSY101 -OL II",
+      "stage": 1,
+      "n": 249,
+      "absence_rate": 0.0723
+    },
+    {
+      "class_name": "PSY101 -OL II",
+      "stage": 2,
+      "n": 156,
+      "absence_rate": 0.0513
+    },
+    {
+      "class_name": "PSY101 -OL II",
+      "stage": 3,
+      "n": 126,
+      "absence_rate": 0.0079
+    },
+    {
+      "class_name": "PSY101 -OL II",
+      "stage": 4,
+      "n": 12,
+      "absence_rate": 0.0833
+    },
+    {
+      "class_name": "PSY301 - OL",
+      "stage": 2,
+      "n": 12,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "SCI 335",
+      "stage": 3,
+      "n": 12,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "SCI101-A",
+      "stage": 1,
+      "n": 72,
+      "absence_rate": 0.0417
+    },
+    {
+      "class_name": "SCI101-A",
+      "stage": 4,
+      "n": 14,
+      "absence_rate": 1.0
+    },
+    {
+      "class_name": "SCI101-P",
+      "stage": 1,
+      "n": 31,
+      "absence_rate": 0.0968
+    },
+    {
+      "class_name": "SCI102-A",
+      "stage": 2,
+      "n": 75,
+      "absence_rate": 0.0533
+    },
+    {
+      "class_name": "SCI201-A",
+      "stage": 2,
+      "n": 45,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "SCI201-A",
+      "stage": 3,
+      "n": 14,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "SCI210",
+      "stage": 3,
+      "n": 45,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "SCI310",
+      "stage": 4,
+      "n": 15,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "SOC101 -OL",
+      "stage": 1,
+      "n": 108,
+      "absence_rate": 0.2037
+    },
+    {
+      "class_name": "SOC101 -OL",
+      "stage": 2,
+      "n": 133,
+      "absence_rate": 0.0902
+    },
+    {
+      "class_name": "SOC101 -OL",
+      "stage": 3,
+      "n": 83,
+      "absence_rate": 0.1566
+    },
+    {
+      "class_name": "SOC101 -OL",
+      "stage": 4,
+      "n": 55,
+      "absence_rate": 0.1273
+    },
+    {
+      "class_name": "SOC300 - OL",
+      "stage": 3,
+      "n": 21,
+      "absence_rate": 0.0
+    },
+    {
+      "class_name": "STAT101-A",
+      "stage": 1,
+      "n": 19,
+      "absence_rate": 0.6316
+    },
+    {
+      "class_name": "STAT101-A",
+      "stage": 2,
+      "n": 46,
+      "absence_rate": 0.2174
+    },
+    {
+      "class_name": "STAT101-A",
+      "stage": 3,
+      "n": 78,
+      "absence_rate": 0.0641
+    },
+    {
+      "class_name": "STAT101-A",
+      "stage": 4,
+      "n": 62,
+      "absence_rate": 0.3226
+    }
+  ],
+  "midterm_withdrawals": {
+    "before_midterm": 122,
+    "after_midterm": 48,
+    "total": 170,
+    "rate_before_midterm": 0.7176,
+    "by_term": {
+      "Fall 2024": {
+        "before_midterm": 17,
+        "after_midterm": 6,
+        "rate_before_midterm": 0.7391
+      },
+      "Fall 2025": {
+        "before_midterm": 22,
+        "after_midterm": 13,
+        "rate_before_midterm": 0.6286
+      },
+      "Spring 2025": {
+        "before_midterm": 25,
+        "after_midterm": 0,
+        "rate_before_midterm": 1.0
+      },
+      "Spring 2026": {
+        "before_midterm": 25,
+        "after_midterm": 14,
+        "rate_before_midterm": 0.641
+      },
+      "Summer 2025": {
+        "before_midterm": 24,
+        "after_midterm": 4,
+        "rate_before_midterm": 0.8571
+      },
+      "Summer 2026": {
+        "before_midterm": 9,
+        "after_midterm": 11,
+        "rate_before_midterm": 0.45
+      }
+    }
+  },
+  "ladder_rate": {
+    "pn_origin_n": 1484,
+    "progressed_n": 153,
+    "reached_aas_n": 153,
+    "reached_bsn_n": 4,
+    "rate": 0.1031
   },
   "completion_proxy_by_enroll_type": {
-    "Full-time (100%)": 0.2281,
-    "Half-time (50%)": 0.2436
+    "Full-time (100%)": 0.2647,
+    "Half-time (50%)": 0.2697
+  },
+  "faculty_ratio_by_term": {
+    "Fall 2024": {
+      "students": 187,
+      "faculty": 19,
+      "ratio": 9.8421
+    },
+    "Fall 2025": {
+      "students": 240,
+      "faculty": 30,
+      "ratio": 8.0
+    },
+    "Spring 2025": {
+      "students": 204,
+      "faculty": 20,
+      "ratio": 10.2
+    },
+    "Spring 2026": {
+      "students": 204,
+      "faculty": 30,
+      "ratio": 6.8
+    },
+    "Summer 2025": {
+      "students": 203,
+      "faculty": 23,
+      "ratio": 8.8261
+    },
+    "Summer 2026": {
+      "students": 190,
+      "faculty": 30,
+      "ratio": 6.3333
+    }
+  },
+  "retention_by_credit_load": {
+    "Full-Time": {
+      "denominator": 401,
+      "retained": 344,
+      "rate": 0.8579
+    },
+    "Part-Time": {
+      "denominator": 321,
+      "retained": 230,
+      "rate": 0.7165
+    }
+  },
+  "full_time_credit_threshold": 12.0,
+  "retention_by_program_source": "class_enrollment",
+  "enrollment_coverage_check": {
+    "Fall 2024": {
+      "roster_active": 68,
+      "class_activity_students": 187,
+      "roster_coverage": 0.3636
+    },
+    "Spring 2025": {
+      "roster_active": 135,
+      "class_activity_students": 209,
+      "roster_coverage": 0.6459
+    },
+    "Summer 2025": {
+      "roster_active": 156,
+      "class_activity_students": 206,
+      "roster_coverage": 0.7573
+    },
+    "Fall 2025": {
+      "roster_active": 208,
+      "class_activity_students": 240,
+      "roster_coverage": 0.8667
+    },
+    "Spring 2026": {
+      "roster_active": 182,
+      "class_activity_students": 210,
+      "roster_coverage": 0.8667
+    },
+    "Summer 2026": {
+      "roster_active": 180,
+      "class_activity_students": 190,
+      "roster_coverage": 0.9474
+    }
+  },
+  "_archive_summary": {
+    "enrollment_files": 6,
+    "withdrawal_files": 6,
+    "gradebook_files": 1,
+    "attendance_files": 6,
+    "engagement_files": 6,
+    "engagement_rows_archived": 463,
+    "absenteeism_hotspots_files": 6,
+    "academic_performance_files": 6,
+    "midterm_withdrawals_files": 6,
+    "gpa_trend_files": 1,
+    "ladder_rate_files": 1,
+    "faculty_ratio_files": 6,
+    "full_time_part_time_files": 6,
+    "retention_by_program_files": 6,
+    "roster_rows": 808,
+    "roster_unique_students": 763
   }
 };
 
 // Dashboard program filter -> REAL_DATA program_short key(s).
-// "ADN" on this dashboard maps to the one ADN program actually present in the
-// uploaded data ("Associate of Applied Science in Nursing One + One").
+// "ADN" on this dashboard sums BOTH ADN program_short buckets present in the
+// uploaded data: "ADN (1+1)" (Associate of Applied Science in Nursing One +
+// One) and plain "ADN" (Associate of Applied Science in Nursing / Registered
+// Nursing). Before the 2026-10-11 batch, only "ADN (1+1)" was mapped here,
+// which silently left ~45 "Associate of Applied Science in Nursing" roster
+// rows (no "One + One") out of every ADN-filtered real number -- fixed now.
 // "RN to BSN Completion Program" is grouped into "BSN" here (both are
 // bachelor's-level pathways) since it is a very small, separate cohort
 // (typically 3 students/term) with no dashboard filter option of its own.
-const REAL_PROGRAM_MAP = { 'BSN': ['BSN','RN-to-BSN'], 'ADN': ['ADN (1+1)'], 'PN': ['PN'] };
+const REAL_PROGRAM_MAP = { 'BSN': ['BSN','RN-to-BSN'], 'ADN': ['ADN (1+1)','ADN'], 'PN': ['PN'] };
 function realProgramKeys(){
   if (state.program === 'All Programs') return null; // null = sum every key present
   return REAL_PROGRAM_MAP[state.program] || [state.program];
@@ -1660,6 +4633,13 @@ function realAttendance(term){
   const r = resolveRealTerm(term);
   const a = REAL_DATA.attendance_by_term[r.term];
   return { value: a?a.rate:null, resolvedTerm:r.term, isFallback:r.isFallback };
+}
+// Real school-wide Faculty:Student Ratio for a given term (not program-
+// filtered -- the underlying extract doesn't carry a Program column).
+function realFacultyRatio(term){
+  const r = resolveRealTerm(term);
+  const f = REAL_DATA.faculty_ratio_by_term[r.term];
+  return { value: f?f.ratio:null, students: f?f.students:null, faculty: f?f.faculty:null, resolvedTerm:r.term, isFallback:r.isFallback };
 }
 // Full 6-term real series, for trend charts (these always show the whole
 // uploaded history rather than a filter-dependent window -- there simply
@@ -2225,8 +5205,8 @@ function pageRetention(){
 
   <div class="section-title">Persistence over time</div>
   <div class="grid grid-2">
-    ${chartCard({id:'retTrend', title:'Retention Rate by Program', sub:'All uploaded term-pairs, ADN &amp; PN shown (BSN/RN-to-BSN cohorts too small to trend reliably)', height:'chart-wrap tall',
-      tableHeaders:['Transition','ADN','PN'], tableRows: realRetByProgramTable(), status:'real'})}
+    ${chartCard({id:'retTrend', title:'Retention Rate by Program', sub:'All uploaded term-pairs, class-enrollment-based (' + realRetByProgramPrograms().join(', ') + ' shown; other programs too small to trend reliably)', height:'chart-wrap tall',
+      tableHeaders:['Transition', ...realRetByProgramPrograms()], tableRows: realRetByProgramTable(), status:'real'})}
     ${chartCard({id:'retTiming', title:'Withdrawals Before vs. After Midterm', sub:'Course-withdrawal events by term (W = before, WP/WF = after)', height:'chart-wrap tall',
       tableHeaders:['Term','Before midterm','After midterm'], tableRows: wdTimingTable(), status:'real'})}
   </div>
@@ -2241,12 +5221,13 @@ function pageRetention(){
   `;
   document.getElementById('pageContent').innerHTML = html;
 
-  const adnSeries = REAL_DATA.term_order.map(term=>{ const row=REAL_DATA.retention_by_program.find(r=>r.to===term && r.program==='ADN (1+1)'); return row?row.rate*100:null; });
-  const pnSeries = REAL_DATA.term_order.map(term=>{ const row=REAL_DATA.retention_by_program.find(r=>r.to===term && r.program==='PN'); return row?row.rate*100:null; });
-  mkChart('retTrend', { type:'line', data:{ labels:REAL_DATA.term_order, datasets:[
-      {label:'ADN', data:adnSeries, borderColor:t.s2, tension:.3, borderWidth:2, pointRadius:2, spanGaps:true},
-      {label:'PN', data:pnSeries, borderColor:t.s3, tension:.3, borderWidth:2, pointRadius:2, spanGaps:true},
-    ]}, options: baseChartOptions(true) });
+  const retByProgPrograms = realRetByProgramPrograms();
+  const progColors = [t.s2, t.s3, t.s1, t.s5, t.s7, t.s4];
+  mkChart('retTrend', { type:'line', data:{ labels:REAL_DATA.term_order, datasets: retByProgPrograms.map((prog,i)=>({
+      label: prog,
+      data: REAL_DATA.term_order.map(term=>{ const row=REAL_DATA.retention_by_program.find(r=>r.to===term && r.program===prog); return row?row.rate*100:null; }),
+      borderColor: progColors[i % progColors.length], tension:.3, borderWidth:2, pointRadius:2, spanGaps:true,
+    })) }, options: baseChartOptions(true) });
 
   const mwByTerm = (mw && mw.by_term) || {};
   const mwBefore = REAL_DATA.term_order.map(term=> mwByTerm[term] ? mwByTerm[term].before_midterm : 0);
@@ -2267,12 +5248,22 @@ function pageRetention(){
   mkChart('retLadder', { type:'bar', data:{ labels:ladderLabels, datasets:[{ data:ladderVals, backgroundColor:[t.s3,t.s1,t.s2], borderRadius:4 }] },
     options:{ ...baseChartOptions(false), indexAxis:'y', plugins:{...baseChartOptions(false).plugins, legend:{display:false}} } });
 }
+// Which programs have at least one real retention-by-program data point,
+// in a fixed, sensible display order (not alphabetical).
+function realRetByProgramPrograms(){
+  const present = new Set(REAL_DATA.retention_by_program.map(r=>r.program));
+  const order = ['PN','ADN (1+1)','ADN','BSN','RN-to-BSN'];
+  return order.filter(p=>present.has(p));
+}
 function realRetByProgramTable(){
+  const programs = realRetByProgramPrograms();
   return REAL_DATA.term_order.slice(1).map(term=>{
-    const adn = REAL_DATA.retention_by_program.find(r=>r.to===term && r.program==='ADN (1+1)');
-    const pn = REAL_DATA.retention_by_program.find(r=>r.to===term && r.program==='PN');
     const from = REAL_DATA.retention.find(r=>r.to===term);
-    return [(from?from.from+' → ':'')+term, adn?pct(adn.rate):'—', pn?pct(pn.rate):'—'];
+    const cells = programs.map(prog=>{
+      const row = REAL_DATA.retention_by_program.find(r=>r.to===term && r.program===prog);
+      return row?pct(row.rate):'—';
+    });
+    return [(from?from.from+' → ':'')+term, ...cells];
   });
 }
 function realWdReasonTable(){
@@ -2375,15 +5366,16 @@ function timeToDegreeTable(){ const progs=['BSN','ADN','PN']; const planned=[36,
 const FACULTY = ['J. Alabi','R. Chen','M. Okafor','S. Patel','L. Brennan','T. Idowu','A. Novak','K. Osei'];
 function pageFaculty(){
   const t = tokens();
-  const ratio = metric('facratio',{base:.7,spread:.06,min:.4,max:1})*16+8;
+  const rFac = realFacultyRatio(state.term);
   const lateRate = metric('latepct',{base:.14,spread:.05,min:.02,max:.4});
   const evalScore = metric('evalscore',{base:4.2,spread:.15,min:3.2,max:4.8});
   const utilization = metric('roomutil',{base:.61,spread:.08,min:.3,max:.9});
+  const facSub = (rFac.isFallback?realTermNote(state.term)+' — ':'') + (rFac.value!=null? ('n='+rFac.students+' students, '+rFac.faculty+' instructors') : 'No data');
 
   const html = `
-  <div class="section-note">${statusDot('pending')}This entire page is pending — the uploaded data batch has no faculty roster, course-evaluation, or facilities/room-booking records yet.</div>
+  <div class="section-note">${statusDot('pending')}Most of this page is still pending — the uploaded data batch has no course-evaluation or facilities/room-booking records yet. Faculty : Student Ratio (below) is now wired to real data.</div>
   <div class="grid grid-4">
-    ${statTile('Faculty : Student Ratio', '1 : '+Math.round(ratio), null, null, 'Didactic sections', null, 'pending')}
+    ${statTile('Faculty : Student Ratio', rFac.value!=null?('1 : '+rFac.value.toFixed(1)):'—', null, null, facSub, null, 'real')}
     ${statTile('Late Submission Rate', pct(lateRate), null, null, 'Attendance/grades past deadline', null, 'pending')}
     ${statTile('Avg. Course Evaluation', evalScore.toFixed(1)+' / 5', null, null, state.term, null, 'pending')}
     ${statTile('Classroom/Lab Utilization', pct(utilization), null, null, 'Peak hours, all rooms', null, 'pending')}
@@ -2448,11 +5440,22 @@ function roomHeatmapData(){
 ========================================================================= */
 function pageEquity(){
   const t = tokens();
-  const ftRate = REAL_DATA.retention_by_enroll_type['Full-time (100%)'].rate;
-  const ptRate = REAL_DATA.retention_by_enroll_type['Half-time (50%)'].rate;
+  // Full-Time vs. Part-Time is now sourced from the credit-hour-based
+  // classification (2026-10-11 batch) when available -- this is the
+  // authoritative source per Felbry's own methodology doc, in place of the
+  // self-reported Enroll Type field. Falls back to Enroll Type if that
+  // extract hasn't been uploaded yet.
+  const creditFT = REAL_DATA.retention_by_credit_load && REAL_DATA.retention_by_credit_load['Full-Time'];
+  const creditPT = REAL_DATA.retention_by_credit_load && REAL_DATA.retention_by_credit_load['Part-Time'];
+  const useCreditBased = !!(creditFT && creditPT && creditFT.rate!=null && creditPT.rate!=null);
+  const ftRate = useCreditBased ? creditFT.rate : REAL_DATA.retention_by_enroll_type['Full-time (100%)'].rate;
+  const ptRate = useCreditBased ? creditPT.rate : REAL_DATA.retention_by_enroll_type['Half-time (50%)'].rate;
+  const ftptLabel = useCreditBased
+    ? `Retention rate, pooled across all uploaded term-pairs — classified by total registered credits/term (${REAL_DATA.full_time_credit_threshold}+ = Full-Time, a standard assumption pending Felbry's confirmation)`
+    : 'Retention rate, pooled across all uploaded term-pairs (self-reported Enroll Type)';
   const pairs = [
     {label:'Full-Time vs. Part-Time', a:'Full-Time', b:'Part-Time', real:true, aVal:ftRate, bVal:ptRate,
-      metricLabel:'Retention rate, pooled across all uploaded term-pairs'},
+      metricLabel: ftptLabel},
     {label:'Continuing-Gen vs. First-Gen', a:'Continuing-Gen', b:'First-Gen', metricKey:'gapFG', base:.87, gap:.09},
     {label:'On-Ground vs. Online Delivery', a:'On-Ground', b:'Online', metricKey:'gapDM', base:.85, gap:.05},
     {label:'Not Employed vs. Working Students', a:'Not Employed', b:'Working', metricKey:'gapEmp', base:.88, gap:.08},
@@ -2520,9 +5523,12 @@ const METHODOLOGY = [
   { kpi:'Enrollment by Program / Program Mix', pages:'Overview, Enrollment',
     source:'Same master roster as Total Enrollment, plus the Program column',
     calc:'Same active-in-term reconstruction as Total Enrollment, grouped by Program. Program names are normalized (e.g. "Associate of Applied Science in Nursing One + One" → ADN; "RN to BSN Completion Program" grouped into BSN, since it is a very small bachelor’s-completion cohort with no dashboard filter of its own).' },
-  { kpi:'Term-to-Term Retention', pages:'Overview, Retention',
+  { kpi:'Term-to-Term Retention (school-wide)', pages:'Overview, Retention',
     source:'Master roster (active-in-term reconstruction above)',
-    calc:'For each pair of consecutive terms, retention = (students active in both terms) ÷ (students active in the earlier term). Computed for all 5 consecutive term-pairs in the upload. The Program-filtered version only shows ADN and PN (the two programs with ≥15 students in a given transition); BSN/RN-to-BSN transitions are too small (often <10 students) to report a reliable rate and fall back to the school-wide figure.' },
+    calc:'For each pair of consecutive terms, retention = (students active in both terms) ÷ (students active in the earlier term). Computed for all 5 consecutive term-pairs in the upload. School-wide only — see "Retention Rate by Program" below for the per-program breakdown, which now uses a different, more complete source.' },
+  { kpi:'Retention Rate by Program', pages:'Overview, Retention',
+    source:'Retention Rate by Program Data (6 files, class-enrollment-based: Student ID, Class Name, Class Start/End Date, Program) — new in the 2026-10-11 batch; now the authoritative source for program-level retention, in place of the registration-roster estimate used previously.',
+    calc:'Retention = (students with class activity in both term n and term n+1, same program) ÷ (students with class activity in term n, same program), for programs with ≥15 students in a given transition (ADN and PN clear this bar; BSN/RN-to-BSN transitions stay too small and are omitted). Both the numerator and denominator population come from THIS SAME extract — important, because its per-term population runs well above the registration roster’s (e.g. 187 vs. 68 students for Fall 2024); mixing the two produced implausible sub-35% rates that were an artifact of comparing a complete population against an undercounted one, not real retention. See the data-quality finding below for what this implies about roster-based Overview metrics. Falls back to the old roster-based estimate (both ends from the roster) if this extract is ever absent.' },
   { kpi:'Withdrawal Rate', pages:'Overview, Retention',
     source:'6 Withdrawn Data files (genuine point-in-time withdrawal extracts — verified these vary Enrolled Semester within each file, unlike the entry-cohort Enrollment files)',
     calc:'Rate = (count of withdrawal records in that term’s file) ÷ (reconstructed active headcount for that term, from the master roster). Not yet broken out by Program — shown school-wide regardless of the Program filter.' },
@@ -2550,9 +5556,12 @@ const METHODOLOGY = [
   { kpi:'PN → AAS/ADN → BSN Ladder Rate', pages:'Retention',
     source:'PN-AAS-BSN Ladder Rate Data: Student ID, Program, Registration Status, Start Date, Grad./Withdraw Date, Enrolled Semester (full historical Program Registration records, not limited to Fall 2024–Summer 2026)',
     calc:'Felbry’s methodology doc establishes that the same Student ID recurs across program registrations (confirmed: 286 of 3,188 students appear under more than one Program value) but stops short of a final formula, so this uses the most direct reading of "ladder rate": among students whose EARLIEST program registration (by Start Date) was Practical Nursing, what share also registered, at any later date, in a higher rung — Associate of Applied Science in Nursing / "One + One" / Registered Nursing (AAS/ADN), or Bachelor of Science in Nursing / RN-to-BSN Completion (BSN)? A single "AASN PN-Test" row is treated as a junk record and excluded.' },
-  { kpi:'Full-Time vs. Part-Time (Equity)', pages:'Demographics & Equity',
-    source:'Master roster, "Enroll Type" column (Full-time 100% / Half-time 50%) + retention reconstruction',
-    calc:'Term-to-term retention rate computed separately for each Enroll Type, pooled across all 5 term transitions (same methodology as Term-to-Term Retention, split by group instead of program).' },
+  { kpi:'Full-Time vs. Part-Time Gap (Equity)', pages:'Demographics & Equity',
+    source:'Full-Time vs. Part-Time Data (6 files, credit-hour based: Student ID, Course Number, Credit, Class Start Date) — new in the 2026-10-11 batch; now the authoritative source per Felbry’s own methodology doc, in place of the self-reported "Enroll Type" field (kept as an automatic fallback if this extract is ever absent).',
+    calc:'Each student’s registered credits are summed per term from this extract, then classified Full-Time if ≥12 credits that term, else Part-Time (12 is the standard U.S. undergraduate full-time threshold — Felbry’s doc calls for "the institutional full-time/part-time credit-hour rule" without stating the number, so this is Claude’s own reasonable default pending the school’s confirmation). That classification is joined by Student ID to the same consecutive-term "retained into n+1" definition used for Term-to-Term Retention, and retention is pooled by Full-Time/Part-Time across all 5 term transitions. (Current result: Full-Time 85.8% vs. Part-Time 71.6%, n=401/321.)' },
+  { kpi:'Faculty : Student Ratio', pages:'Faculty & Operations',
+    source:'Faculty : Student Ratio Data (6 files, class/section-level: Student ID, Class Name, Instructor Last/First Name, Class Start/End Date) — new in the 2026-10-11 batch.',
+    calc:'Per term: distinct Student IDs across all classes that term ÷ distinct real instructors across those same classes. "TBD" — Orbund’s placeholder for an unassigned instructor — is excluded from the faculty count so it doesn’t get counted as a real person understating the ratio. Reported school-wide, not yet broken out by program.' },
 ];
 const PENDING_ITEMS = [
   { kpi:'NCLEX First-Time Pass Rate', pages:'Overview, Clinical', reason:'No licensure-exam results file (e.g. an OBN/ABHES export) was included in this upload batch.' },
@@ -2569,7 +5578,7 @@ function pageDocumentation(){
   const html = `
   <div class="section-note">This page is the data-governance record for the dashboard: for every metric currently marked <b>green</b> (wired to real uploaded data), exactly which files and columns feed it and how it’s calculated; and for every metric still <b>amber</b> (pending/demo), exactly what’s missing. As new data batches are uploaded, more rows move from the pending list into the methodology table below — nothing here changes retroactively without a documented reason.</div>
 
-  <div class="section-title">${statusDot('real')}Methodology — metrics wired to real data (batches: 2026-09-26, 2026-10-01)</div>
+  <div class="section-title">${statusDot('real')}Methodology — metrics wired to real data (batches: 2026-09-26, 2026-10-01, 2026-10-11)</div>
   <div class="card">
     <div class="table-scroll"><table class="data-table doc-table">
       <thead><tr><th style="width:22%">KPI / Chart</th><th style="width:12%">Dashboard page(s)</th><th style="width:66%">Source data &amp; calculation</th></tr></thead>
@@ -2583,6 +5592,19 @@ function pageDocumentation(){
       <thead><tr><th style="width:26%">KPI / Chart</th><th style="width:12%">Dashboard page(s)</th><th style="width:62%">Why it’s still pending</th></tr></thead>
       <tbody>${PENDING_ITEMS.map(p=>`<tr><td class="emph">${p.kpi}</td><td>${p.pages}</td><td>${p.reason}</td></tr>`).join('')}</tbody>
     </table></div>
+  </div>
+
+  <div class="section-title" style="margin-top:22px;">Key data-quality finding (2026-10-11): the enrollment roster undercounts real headcount, worst in Fall 2024</div>
+  <div class="card">
+    <div style="font-size:13px;line-height:1.7;color:var(--text-secondary);">
+      The 2026-10-11 batch's three new class-enrollment-based extracts (Retention Rate by Program, Faculty : Student Ratio, Full-Time vs. Part-Time) each show far more distinct students active in a term than the registration-roster reconstruction above does for that same term — e.g. 187 students in Fall 2024 vs. only 68 in the roster. This isn't one bad file: attendance (194) and academic-performance (172) independently agree with the new extracts, not with the roster. The likely cause is structural — the roster is built entirely from 6 entry-cohort files spanning Fall 2024 through Summer 2026, so any student who entered before Fall 2024 and is still continuing never appears in it, even though GPA Trend by Cohort already shows real coursework from cohorts as far back as Fall 2017.
+      <br><br>
+      Roster coverage of the true active population improves steadily over the 6 terms as more of that real population falls inside the roster's own window: Fall 2024 68/187 (36%), Spring 2025 135/209 (65%), Summer 2025 156/206 (76%), Fall 2025 208/240 (87%), Spring 2026 182/210 (87%), Summer 2026 180/190 (95%).
+      <br><br>
+      <b>What this means:</b> Total Enrollment, Enrollment by Program, Program Mix, Term-to-Term Retention (school-wide), and Withdrawal Rate on the Overview page are all built on this same roster reconstruction and likely <b>undercount</b> real headcount — worst for Fall 2024, nearly resolved by Summer 2026. They are left as-is here rather than silently recalculated, since that would change already-reported headline numbers without Felbry's sign-off.
+      <br><br>
+      <b>Not yet fixed; recommended next step:</b> Retention Rate by Program was rebuilt this batch using the new class-enrollment extract for BOTH ends of each retention calculation (not mixed with the roster — mixing the two produced an implausible sub-35% rate that was an artifact of comparing a complete population against an undercounted one). The same fix can't be applied to the Overview page's headline numbers, because there's no equivalent "who is currently active" source for them to switch to. Fully resolving this would need Felbry to provide one true per-term "currently enrolled" snapshot (not an entry-cohort export) for each of the 6 terms.
+    </div>
   </div>
 
   <div class="section-title" style="margin-top:22px;">Key data-quality finding: enrollment files are entry cohorts, not term snapshots</div>
